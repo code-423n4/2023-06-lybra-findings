@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "T1MOH",
+  "risk": "3",
+  "title": "`_voteSucceeded()` returns true when `againstVotes > forVotes` and vice versa",
+  "issueId": 15,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/15"
+}
