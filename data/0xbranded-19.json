@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xbranded",
+  "risk": "2",
+  "title": "'mint' function of three vaults vulnerable to reentrancy pending contract upgrade",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/19"
+}
