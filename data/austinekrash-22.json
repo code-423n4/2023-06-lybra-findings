@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "austinekrash",
+  "risk": "2",
+  "title": "Enforce consistent verification of account balances before and after transfers to detect any discrepancies related to fee-on-transfer mechanisms.",
+  "issueId": 22,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/22"
+}
