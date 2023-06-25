@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "2",
+  "title": "Incorrect order of operations in EUSD repay function affects reward calculation",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/43"
+}
