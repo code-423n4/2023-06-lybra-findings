@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "adeolu",
+  "risk": "3",
+  "title": "Bad Modifier logic in LybraConfigurator.sol, Anyone call call sucessfully",
+  "issueId": 51,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/51"
+}
