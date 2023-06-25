@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "DavidGiladi",
+  "risk": "2",
+  "title": "Calls transfer()/transferFrom() With IERC20",
+  "issueId": 34,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/34"
+}
