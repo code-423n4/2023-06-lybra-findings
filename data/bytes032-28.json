@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "2",
+  "title": "Potential for unintended liquidation due to deposit constraints in Lybra Protocol when using StETH vault",
+  "issueId": 28,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/28"
+}
