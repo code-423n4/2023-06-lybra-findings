@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "T1MOH",
+  "risk": "3",
+  "title": "Liquidation may never happen due to incorrect check of collateralRatio",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/45"
+}
