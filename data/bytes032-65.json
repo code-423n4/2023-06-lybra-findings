@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "3",
+  "title": "Large depositors can lower the overall liquidation threshold to force super liquidations",
+  "issueId": 65,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/65"
+}
