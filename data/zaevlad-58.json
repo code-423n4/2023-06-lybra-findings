@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "zaevlad",
+  "risk": "2",
+  "title": "Collateral deposits can revert on some token transfers due to a success check",
+  "issueId": 58,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/58"
+}
