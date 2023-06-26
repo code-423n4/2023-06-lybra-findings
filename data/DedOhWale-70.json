@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "DedOhWale",
+  "risk": "3",
+  "title": "Access Control can lead to anyone utilizing the DAO, TIMELOCK, or ADMIN role",
+  "issueId": 70,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/70"
+}
