@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Co0nan",
+  "risk": "2",
+  "title": "User will not be able to repay their debt when they mint for another address leading to loss his collateral.",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/87"
+}
