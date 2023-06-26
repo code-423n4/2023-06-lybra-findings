@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "zhaojie",
+  "risk": "3",
+  "title": "LybraPeUSDVaultBase: Transferring the token to its own address causes the contract status to be abnormal",
+  "issueId": 60,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/60"
+}
