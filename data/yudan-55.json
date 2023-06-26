@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "yudan",
+  "risk": "2",
+  "title": "Bypass `isOtherEarningsClaimable` check",
+  "issueId": 55,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/55"
+}
