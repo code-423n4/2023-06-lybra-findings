@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "smaul",
+  "risk": "2",
+  "title": "Usage of wrong WBETH address can lead to unexpected bugs",
+  "issueId": 79,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/79"
+}
