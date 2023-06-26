@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "XDZIBECX",
+  "risk": "3",
+  "title": " esLBR contract  have the _transfer function that reverts when trying to transfer esLBR tokens",
+  "issueId": 78,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/78"
+}
