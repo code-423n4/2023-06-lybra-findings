@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "zaevlad",
+  "risk": "2",
+  "title": "It will not be possible to mint PeUSD due to absence on mint() function",
+  "issueId": 73,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/73"
+}
