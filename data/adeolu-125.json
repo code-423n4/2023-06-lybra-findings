@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "adeolu",
+  "risk": "2",
+  "title": "borrowed[_onBehalfOf] is never set in LybraPeUSDVaultBase.sol, can cause reverts due to division by zero in liquidation() and also causes revert in burn fcn.",
+  "issueId": 125,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/125"
+}
