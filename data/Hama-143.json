@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Hama",
+  "risk": "2",
+  "title": " Potential Underflow Issues in earned() and grabEsLBR() Functions",
+  "issueId": 143,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/143"
+}
