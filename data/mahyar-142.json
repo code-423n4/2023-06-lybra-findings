@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "mahyar",
+  "risk": "3",
+  "title": "LybraConfigurator : onlyRole and checkRole modifiers doesn't revert, all functions used this modifiers are vulnerable",
+  "issueId": 142,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/142"
+}
