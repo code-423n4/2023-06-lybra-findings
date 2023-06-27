@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "2",
+  "title": "Flash loan execution can be easily DoS'ed under certain conditions",
+  "issueId": 113,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/113"
+}
