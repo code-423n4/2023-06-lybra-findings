@@ -14,3 +14,8 @@ Whether remove this comment or implement such functionality in `mint(...)`:
             poolTotalEUSDCirculation  > 10_000_000 * 1e18
         ) revert("Mint Amount cannot be more than 10% of total circulation");
 ```
+
+#### Q2
+The two key parameters `vaultSafeCollateralRatio` and `vaultBadCollateralRatio` are set in 
+
+#### Q3
