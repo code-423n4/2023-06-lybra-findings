@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "2",
+  "title": "EUSDMintingIncentives `stakedOf` can potentially brick minting/burning of pools",
+  "issueId": 105,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/105"
+}
