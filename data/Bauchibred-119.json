@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Bauchibred",
+  "risk": "3",
+  "title": "Implementation of OpenZeppelin's `Ownable.sol` now requires a direct call to set the owner",
+  "issueId": 119,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/119"
+}
