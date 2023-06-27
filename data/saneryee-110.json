@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "saneryee",
+  "risk": "2",
+  "title": "Contracts are vulnerable to fee-on-transfer accounting-related issues",
+  "issueId": 110,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/110"
+}
