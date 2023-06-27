@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xWaitress",
+  "risk": "2",
+  "title": "depositEtherToMint would revert since the shareAmount returns from wrapping ETH into stETH does not always translate into exact same ETH in wstETH, due to precision loss",
+  "issueId": 127,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/127"
+}
