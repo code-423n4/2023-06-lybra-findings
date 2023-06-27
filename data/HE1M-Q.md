@@ -16,6 +16,7 @@ Whether remove this comment or implement such functionality in `mint(...)`:
 ```
 
 #### Q2
-The two key parameters `vaultSafeCollateralRatio` and `vaultBadCollateralRatio` are set in 
 
-#### Q3
+
+
+
