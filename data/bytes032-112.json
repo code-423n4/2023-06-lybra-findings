@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "3",
+  "title": "Any native ether sent to `executeFlashLoan` is irrevocably lost",
+  "issueId": 112,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/112"
+}
