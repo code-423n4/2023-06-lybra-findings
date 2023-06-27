@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "LybraWbETHVault.sol has the wrong address commented for WBETH.",
+  "issueId": 141,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/141"
+}
