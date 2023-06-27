@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "If a user repays only the interest accumulated from borrowing PeUSD, the principal amount will be repaid as well, which bricks interest accounting",
+  "issueId": 139,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/139"
+}
