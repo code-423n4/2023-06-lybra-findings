@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xWaitress",
+  "risk": "2",
+  "title": "rewardPerToken() in stakerewardV2pool does not account for boost leading to an inflated rewardPerTokenStored vs the notifyRewardAmount",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/117"
+}
