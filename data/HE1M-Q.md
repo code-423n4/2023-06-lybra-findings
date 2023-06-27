@@ -15,7 +15,7 @@ Whether remove this comment or implement such functionality in `mint(...)`:
         ) revert("Mint Amount cannot be more than 10% of total circulation");
 ```
 
-#### Q2
+
 
 
 
