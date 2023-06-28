@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "stETH is assumed to be 1-1 with ETH in LybraStETHVault.sol, which may be undesirable for borrows",
+  "issueId": 199,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/199"
+}
