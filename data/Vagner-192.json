@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Vagner",
+  "risk": "3",
+  "title": "`_repay` function in `LybraPeUSDVaultBase.sol` will revert because of an underflow 100% of the time in some cases",
+  "issueId": 192,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/192"
+}
