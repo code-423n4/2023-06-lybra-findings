@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xRobocop",
+  "risk": "3",
+  "title": "Erronous account on the _repay function at the LybraPeUSDVaultBase contract",
+  "issueId": 146,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/146"
+}
