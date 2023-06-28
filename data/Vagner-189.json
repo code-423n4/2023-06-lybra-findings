@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Vagner",
+  "risk": "3",
+  "title": "The function `getAssetPrice` in `LybraRETHVault.sol` and `LybraWbETHVault.sol` calls the wrong function in calculating the price which would make the function unusable",
+  "issueId": 189,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/189"
+}
