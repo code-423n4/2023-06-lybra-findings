@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "There is no deposit availability check when depositing staked tokens into the protocol",
+  "issueId": 202,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/202"
+}
