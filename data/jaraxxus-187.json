@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "jaraxxus",
+  "risk": "2",
+  "title": "LBR/USD price feed oracle does not exist on Chainlink oracle feeds",
+  "issueId": 187,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/187"
+}
