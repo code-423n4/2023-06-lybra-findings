@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "pipoca",
+  "risk": "2",
+  "title": "Missing Input Validation on unstake Function Can Lead to Gas Inefficiency and Misleading Event Logs",
+  "issueId": 203,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/203"
+}
