@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Bughunter101",
+  "risk": "2",
+  "title": "`EUSDMiningIncentives.purchaseOtherEarnings()` call `latestRoundData()` but does not check if `lbrPrice > 0`",
+  "issueId": 157,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/157"
+}
