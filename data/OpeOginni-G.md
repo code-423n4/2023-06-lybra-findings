@@ -9,3 +9,11 @@ File: contracts/lybra/pools/base/LybraEUSDVaultBase.sol
 ```
 
 This require statement only checks the values from the parameters of the Function `superLiquidation(address provider, address onBehalfOf, uint256 assetAmount)`, but is put below some other function calls that might waste gas if this Require statement ends up failing the whole function. Therefore it the require statement at line 192 should be put at the top of the function BEFORE any internal function calls.
+
+This also happens in the following files:
+``` 
+File: contracts/lybra/pools/base/LybraPeUSDVaultBase.sol
+
+130:        require(assetAmount * 2 <= depositedAsset[onBehalfOf], "a max of 50% collateral can be liquidated");
+        require(PeUSD.allowance(provider, address(this)) > 0, "provider should authorize to provide liquidation EUSD");
+```
