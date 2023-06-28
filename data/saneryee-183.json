@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "saneryee",
+  "risk": "2",
+  "title": "Some tokens may revert when zero value transfers are made",
+  "issueId": 183,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/183"
+}
