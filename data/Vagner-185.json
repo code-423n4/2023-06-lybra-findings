@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Vagner",
+  "risk": "2",
+  "title": "`setLidoRebaseTime` in `LybraStETHVault.sol` and `_execute` in `LybraGovernance.sol` don't have enough parenthesis which makes the code not compilable",
+  "issueId": 185,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/185"
+}
