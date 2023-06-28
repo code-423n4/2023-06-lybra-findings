@@ -19,7 +19,7 @@ This can be confusing for users, making the natspec  compatible with the functio
 
 3-https://github.com/code-423n4/2023-06-lybra/blob/26915a826c90eeb829863ec3851c3c785800594b/contracts/lybra/pools/LybraStETHVault.sol#L37-L42
 
-Bug Report: Lack of "Paused" State Check in deposEtherToMint()
+Lack of "Paused" State Check in deposEtherToMint()
 
 Description:
 In the deposEtherToMint() function of the Lido contract, there is no check for the paused state, which poses a potential vulnerability. This report aims to highlight this issue and propose a remediation strategy.
@@ -28,32 +28,36 @@ Detailed Explanation:
 When a user calls the deposEtherToMint() function, no verification is performed to ensure that the Lido contract is not in a paused state. This lack of a paused state check could lead to unintended user interaction and potential exploitability, as the function could be called even when the contract is not active or undergoing maintenance.
 it is recommended to add a paused state check within the deposEtherToMint() function. This can be achieved by modifying the function as follows:
 
-        function depositEtherToMint() 
+        function 
+        depositEtherToMint() 
         public payable {
-        require(!paused(), "The lido  is 
-        currently paused."); // Added 
-         paused state check
+        require(!paused(), "The 
+        lido  is 
+        currently paused."); // 
+        Added  aused state check
 
-4-https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/token/LBR.sol#L49-L59
+4-https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L140-L143
 
- Unsed functions internal functions in LBR.sol 
+Lack of input validation amount can be set to zero in the `burn` function, contradicting the contract's Natspec 
 
-It is recommended to remove unsed used functions for the following reasons 
-Reason 1: Improved code readability
-    * By removing unused code, the contract becomes easier to read and understand for developers and auditors. 
-    * Ensuring only necessary functions are present enhances code readability and reduces confusion.
+     * - `onBehalfOf` cannot be the 
+     zero address.
+     * - `amount` Must be higher 
+     than 0.
+     * @dev Calling the 
+      internal`_repay`function.
+     */
+     function burn(address 
+     onBehalfOf, uint256 amount) 
+     external {
+        require(onBehalfOf != 
+     address(0), 
+     "BURN_TO_THE_ZERO_ADDRESS");
+        _repay(msg.sender, 
+      onBehalfOf, amount);
+      }
 
- Reason 2: Reduced contract size and gas cost
-    * Unused functions contribute to the overall size of the contract. By removing them, the contract's bytecode size is reduced, 
-    * resulting in lower deployment and transaction costs. It also reduces the potential for bugs and vulnerabilities in untested code.
 
-Reason 3: Mitigated security risks
-    * Unused functions may contain unintended vulnerabilities or bugs that pose security risks. By removing them, the attack surface of the contract is reduced,
-    * thereby minimizing the potential for exploitation and increasing the overall security of the smart contract.
-
-Improved contract performance
-    * Removing unused code can lead to improved contract performance. Unnecessary calculations and operations are eliminated,
-    * resulting in more efficient execution and faster transaction processing.
 
 5-https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/token/EUSD.sol#L333-L341
 
@@ -109,9 +113,13 @@ Token Integrity: Without token verification, non-stETH tokens could be mistakenl
    - User Experience: Users might mistakenly deposit incorrect tokens, encounter unexpected errors, or experience delays due to failed transactions or incorrect calculations. This could harm user trust and hinder the adoption of the lending/borrowing protocol.
 
         require(collateralAsset == 
-        address(stEthTokenContract), 
-        "Invalid token"); ensures that the 
-        token being transferred is exactly 
+        
+        
+       address(stEthTokenContract), 
+        "Invalid token"); ensures 
+        that the 
+        token being transferred is 
+        exactly 
         stEth.
 
 9- https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/EUSDMiningIncentives.sol#L137-L138
@@ -123,4 +131,32 @@ To ensure accurate calculations, it is advisable to initialize `amount` to zero 
       uint256 `amount` = 0;
 
 By initializing `amount` to zero, you can guarantee that its value is consistent throughout the execution of the loop.
+
+10- Missing events for critical parameters changes, add events to track changes 
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L109-L113)
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L119-L123
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L158-L162
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L167-L171
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L177-L181
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L246-L251
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L261-L264
+
+11- Function emits wrong event 
+The function `setBadCollateralRatio` Emits `emit SafeCollateralRatioChanged(pool, newRatio);`
+ Instead of `emit BadCollateralRatioChanged(pool, newRatio);`
+
+(https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/configuration/LybraConfigurator.sol#L126-L131)
+
+12- Stake and unstake function not checking input validation, amount can be zero 
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/ProtocolRewardsPool.sol#L73-L78)
+
+https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/ProtocolRewardsPool.sol#L87-L98
 
