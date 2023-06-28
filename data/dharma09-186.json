@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "dharma09",
+  "risk": "2",
+  "title": "Division before multiplication incurs unnecessary precision loss",
+  "issueId": 186,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/186"
+}
