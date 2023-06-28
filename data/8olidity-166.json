@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "8olidity",
+  "risk": "2",
+  "title": "Significant loss of precision possible",
+  "issueId": 166,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/166"
+}
