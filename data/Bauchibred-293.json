@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Bauchibred",
+  "risk": "2",
+  "title": " Funds Could Get Stuck due to Underpayment of Gas in `convertToPeUSDAndCrossChain()`",
+  "issueId": 293,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/293"
+}
