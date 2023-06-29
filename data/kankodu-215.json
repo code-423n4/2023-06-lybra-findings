@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "kankodu",
+  "risk": "2",
+  "title": "Any smart contract (including multisigs) that has a fallbackback function and EUSD share balance can be forced to burn their tokens",
+  "issueId": 215,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/215"
+}
