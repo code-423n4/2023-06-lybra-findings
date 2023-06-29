@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "emit an events are missed for critical functions",
+  "issueId": 312,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/312"
+}
