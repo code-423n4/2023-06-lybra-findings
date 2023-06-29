@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnev",
+  "risk": "3",
+  "title": "## [H-04] `LybraGovernance.votingPeriod()/votingDelay()`: Wrong voting period and voting delay implemented",
+  "issueId": 320,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/320"
+}
