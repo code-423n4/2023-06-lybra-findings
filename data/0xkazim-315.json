@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "Dos may happen in `stakedOf` function because of large amount of pools",
+  "issueId": 315,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/315"
+}
