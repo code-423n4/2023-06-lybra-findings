@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "Minting PeUSD for the first time in LybraPeUSDVaultBase is extremely expensive as fee calculation is broken",
+  "issueId": 294,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/294"
+}
