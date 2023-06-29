@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "zaevlad",
+  "risk": "3",
+  "title": "Malicious user can drain PeUSDMainnetStableVision via executeFlashloan()",
+  "issueId": 280,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/280"
+}
