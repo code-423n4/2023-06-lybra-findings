@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "users can withdraw `stETH` for other users to avoid the paid fee",
+  "issueId": 306,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/306"
+}
