@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "RedTiger",
+  "risk": "2",
+  "title": " badCollateralRatio can't be changed for the rebasing Vaults",
+  "issueId": 279,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/279"
+}
