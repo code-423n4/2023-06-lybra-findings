@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Co0nan",
+  "risk": "3",
+  "title": "Unauthorized liquidation due to wrong allowance check on EUSD/PeUSD vaults",
+  "issueId": 307,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/307"
+}
