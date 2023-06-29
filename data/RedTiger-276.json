@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "RedTiger",
+  "risk": "2",
+  "title": " SafeCollateralRatio can be set as low as 10, which could lead to a loss of funds",
+  "issueId": 276,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/276"
+}
