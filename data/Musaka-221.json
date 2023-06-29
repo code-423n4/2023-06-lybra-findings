@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Musaka",
+  "risk": "2",
+  "title": "Volatile prices and lack of checks on `rigidRedemption()` can cause users to purchase stETH at unwanted prices",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/221"
+}
