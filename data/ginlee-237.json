@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ginlee",
+  "risk": "3",
+  "title": "CEI pattern not followed in almost every external function which may lead to reentrancy ",
+  "issueId": 237,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/237"
+}
