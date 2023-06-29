@@ -15,3 +15,7 @@ a) esLBBoost.sol
    As there is no function to remove the record added by mistake, it remains as option to select.
 
 b) setLockStatus accepts index as parameter to select the lock settings. As there is no check for bounds on the incoming parameter, passing values greater than size of lockSetting array will throw error. 
+
+
+c) It is not evident from the code base, how the LybraProxy and LybraProxyAdmin are being used.
+   There are no upgradeable contracts found.
