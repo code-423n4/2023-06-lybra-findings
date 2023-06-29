@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Musaka",
+  "risk": "2",
+  "title": "Rewards could be stolen on users who have withdrawn most of their LP from the UNIv2 **ETH/LBR** pool, but not replayed their borrow.",
+  "issueId": 256,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/256"
+}
