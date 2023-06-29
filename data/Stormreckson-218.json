@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Stormreckson",
+  "risk": "2",
+  "title": "Token Miner Management - Lack of `RemoveTokenMiner` Function",
+  "issueId": 218,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/218"
+}
