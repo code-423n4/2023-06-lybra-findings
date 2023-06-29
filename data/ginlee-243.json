@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ginlee",
+  "risk": "2",
+  "title": "Should check return value of burn and mint in function stake",
+  "issueId": 243,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/243"
+}
