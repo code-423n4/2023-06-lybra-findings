@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "SpicyMeatball",
+  "risk": "3",
+  "title": "When repaying debt  same value is subtracted from fee and borrowed amount which can result in repayment with amounts smaller than `borrowed[user] + totalFee`",
+  "issueId": 300,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/300"
+}
