@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Bauchibred",
+  "risk": "2",
+  "title": " Pragma isn't specified correctly, which can lead to non-functional/damaged contracts when deployed on other chains",
+  "issueId": 261,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/261"
+}
