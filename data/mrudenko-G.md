@@ -30,7 +30,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2
 - https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/token/EUSD.sol#L99 - name function is not a part of standard IERC20, so function name can be removed, and you can use `name` const instead
 - https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/token/EUSD.sol#L107 - symbol function is not a part of standard IERC20, so function name can be removed, and you can use `symbol` const instead
 
-###Remove duplicated required statements, use modifiers
+### Remove duplicated required statements, use modifiers
 ## Place 1
 - https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/EUSDMiningIncentives.sol#L106
 - https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/EUSDMiningIncentives.sol#L111
