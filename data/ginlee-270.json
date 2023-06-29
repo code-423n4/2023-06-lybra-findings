@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ginlee",
+  "risk": "3",
+  "title": "Not safe to use collateralAsset.balanceOf(address(this)) to calculate totalDepositedAsset",
+  "issueId": 270,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/270"
+}
