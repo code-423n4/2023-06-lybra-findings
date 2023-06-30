@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "SpicyMeatball",
+  "risk": "2",
+  "title": "Unchecked return in `notifyRewardAmount` may result in \"loss\" of reward tokens",
+  "issueId": 339,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/339"
+}
