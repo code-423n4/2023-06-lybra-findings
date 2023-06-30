@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ktg",
+  "risk": "3",
+  "title": "Configurator cannot set safe collateral ratio due to invalid vaultType function call",
+  "issueId": 353,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/353"
+}
