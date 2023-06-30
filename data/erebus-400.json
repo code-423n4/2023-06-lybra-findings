@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "erebus",
+  "risk": "3",
+  "title": "Loss of user funds if mintAmount is 0",
+  "issueId": 400,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/400"
+}
