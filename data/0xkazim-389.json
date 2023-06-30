@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "reentrancy attack are possible because of calling `_mint` before all state updates in `LybraPeUSDVaultBase#_mintPeUSD`",
+  "issueId": 389,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/389"
+}
