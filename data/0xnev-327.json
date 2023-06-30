@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnev",
+  "risk": "2",
+  "title": "`LybraEUSDVaultBase._mintEUSD()`: Wrong `_saveReport()` function call order leads to lesser rewards earned for LBR stakers.",
+  "issueId": 327,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/327"
+}
