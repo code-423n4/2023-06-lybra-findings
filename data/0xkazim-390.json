@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "the function `liquidation` in the `peUSDMainnetStableVisition` contract making a call to the `PeUSD.allowance` function that is non-exist",
+  "issueId": 390,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/390"
+}
