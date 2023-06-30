@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnev",
+  "risk": "2",
+  "title": "`LybraStETHVault.getDutchAuctionDiscountPrice()`: Dutch auction mechanism starts 30 minutes earlier leads to additional 1% decrease of discount rate per 30 minutes",
+  "issueId": 326,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/326"
+}
