@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "adeolu",
+  "risk": "2",
+  "title": "Uncaught possible revert error in withdraw() of StakingRewardsV2 contract due to subtraction of large uint value from small uint value ",
+  "issueId": 373,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/373"
+}
