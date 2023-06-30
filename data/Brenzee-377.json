@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Brenzee",
+  "risk": "2",
+  "title": "`LybraEUSDVaultBase` - eUSD allowance in `liquidation` function is not checked correctly",
+  "issueId": 377,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/377"
+}
