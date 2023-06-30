@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "pep7siup",
+  "risk": "2",
+  "title": "Configurator.initToken() can be called multiple times",
+  "issueId": 369,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/369"
+}
