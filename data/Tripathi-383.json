@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Tripathi",
+  "risk": "2",
+  "title": "Anyone can break protocol logic(\" Deposit should not be less than 1 stETH \") and can deposit any amount indirectly",
+  "issueId": 383,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/383"
+}
