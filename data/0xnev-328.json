@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnev",
+  "risk": "2",
+  "title": "[M-06] `rigidRedemption()`: Rigid redemption provider can DoS rigid redemptions at any time",
+  "issueId": 328,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/328"
+}
