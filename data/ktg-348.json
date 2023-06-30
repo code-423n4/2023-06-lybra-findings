@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ktg",
+  "risk": "2",
+  "title": "LybraEUSDVaultBase.liquidation does not take into account overall collateral ratio",
+  "issueId": 348,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/348"
+}
