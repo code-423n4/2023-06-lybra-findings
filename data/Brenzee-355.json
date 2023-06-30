@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Brenzee",
+  "risk": "3",
+  "title": "`ProtocolRewardsPool` - users do not get excess LBR tokens earned from staking when `unstake` or `withdraw` is called",
+  "issueId": 355,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/355"
+}
