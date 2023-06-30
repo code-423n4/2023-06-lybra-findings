@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "HE1M",
+  "risk": "3",
+  "title": "Making `_totalSupply` and `_totalShares` imbalance significantly by providing fake income",
+  "issueId": 340,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/340"
+}
