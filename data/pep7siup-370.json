@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "pep7siup",
+  "risk": "2",
+  "title": "EUSDMiningIncentives.stakedLBRLpValue() uses a hardcoded WETH address from Eth mainnet. ",
+  "issueId": 370,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/370"
+}
