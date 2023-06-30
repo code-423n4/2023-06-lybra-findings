@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "adeolu",
+  "risk": "3",
+  "title": "No check for Individual mint amount surpassing 10% when the circulation reaches 10_000_000 in mint() of LybraEUSDVaultBase contract",
+  "issueId": 392,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/392"
+}
