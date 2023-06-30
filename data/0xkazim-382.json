@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "the check for `paused` in the `EUSD.sol` contract are missed",
+  "issueId": 382,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/382"
+}
