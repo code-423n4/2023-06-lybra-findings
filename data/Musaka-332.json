@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Musaka",
+  "risk": "2",
+  "title": "Users can actually be liquidated for 55% of their total collateral with normal liquidations",
+  "issueId": 332,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/332"
+}
