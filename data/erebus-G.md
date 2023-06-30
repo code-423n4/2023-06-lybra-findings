@@ -1,0 +1,1 @@
+Change strings in `require` to custom errors, saving gas on the way. The regex pattern is `"\w*"\);` and loop through the occurrences
