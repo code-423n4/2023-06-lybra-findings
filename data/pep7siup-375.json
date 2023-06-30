@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "pep7siup",
+  "risk": "2",
+  "title": "Chainlink’s latestRoundData() might return stale or incorrect results",
+  "issueId": 375,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/375"
+}
