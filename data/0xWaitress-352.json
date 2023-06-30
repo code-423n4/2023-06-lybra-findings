@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xWaitress",
+  "risk": "3",
+  "title": "getMintedEUSDByShares with precision loss leading to free flashloan of 1wei possible",
+  "issueId": 352,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/352"
+}
