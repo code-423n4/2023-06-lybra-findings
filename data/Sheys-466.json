@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Sheys",
+  "risk": "2",
+  "title": "Hardcoded values in ```_newFee ``` function lead to precision loss and could underflow to zero.",
+  "issueId": 466,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/466"
+}
