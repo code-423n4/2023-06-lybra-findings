@@ -27,7 +27,7 @@ which is deployed in the following address:
 https://etherscan.io/address/0xae78736Cd615f374D3085123A210448E74Fc6393#readContract#F6
 
 This can cause the protocol not to be able to mint PeUSD when depositing ETH into Rocket Pool, because it will revert. The flow is:
-LybraRETHVault::depositEtherToMint >> LybraRETHVault::getAssetPRice >> IRETH(address(collateralAsset)).getExchangeRatio() >> Revert!!!
+LybraRETHVault::depositEtherToMint >> LybraRETHVault::getAssetPrice >> IRETH(address(collateralAsset)).getExchangeRatio() >> Revert!!!
 https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraRETHVault.sol#L27
 https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraRETHVault.sol#L35
 https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraRETHVault.sol#L47C33-L47C83
