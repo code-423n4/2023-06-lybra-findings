@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "SpicyMeatball",
+  "risk": "3",
+  "title": "It is possible to manipulate WETH/LBR pair to claim reward of the users which shouldn't be claimed",
+  "issueId": 442,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/442"
+}
