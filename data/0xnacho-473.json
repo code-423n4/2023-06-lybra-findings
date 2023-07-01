@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnacho",
+  "risk": "3",
+  "title": "LybraPeUSDVaultBase#mint: Individual mint amount of peUSD can surpass 10% when the token circulation reaches 10.000.000",
+  "issueId": 473,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/473"
+}
