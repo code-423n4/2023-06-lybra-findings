@@ -131,3 +131,8 @@ https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2
 
 https://github.com/code-423n4/2023-06-lybra/blob/5d70170f2c68dbd3f7b8c0c8fd6b0b2218784ea6/contracts/lybra/miner/ProtocolRewardsPool.sol#L87-L98
 
+13- https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/miner/ProtocolRewardsPool.sol#L33-L39
+
+Uint type is not declared explicitly as uint256
+
+it is recommended to explicitly specify the size of integers, even if it is uint256. It improves readability and avoids potential confusion or compatibility issues when interacting with other contracts.
