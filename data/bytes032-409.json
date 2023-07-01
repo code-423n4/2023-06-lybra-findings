@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "3",
+  "title": "esLBR Tokens Not Burned When Converting to LBR Prematurely",
+  "issueId": 409,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/409"
+}
