@@ -1,8 +1,0 @@
-{
-  "contest": 254,
-  "handle": "0x3b",
-  "risk": "3",
-  "title": "REKT interface uses wrong function, `LybraRETHVault` is inoperable",
-  "issueId": 418,
-  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/418"
-}
