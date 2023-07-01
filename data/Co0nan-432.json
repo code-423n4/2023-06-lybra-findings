@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Co0nan",
+  "risk": "2",
+  "title": "getAssetPrice() of RETH Vault call undefined function in the rkPool causing DoS for all major functions.",
+  "issueId": 432,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/432"
+}
