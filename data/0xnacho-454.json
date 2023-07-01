@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnacho",
+  "risk": "3",
+  "title": "LybraRETHVault: peUSD minting does not work because of incorrect implementation of the LybraRETHVault#getAssetPrice()",
+  "issueId": 454,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/454"
+}
