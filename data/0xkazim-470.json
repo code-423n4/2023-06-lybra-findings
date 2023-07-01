@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "hardcoded time in multi chain protocols not recommended",
+  "issueId": 470,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/470"
+}
