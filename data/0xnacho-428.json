@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnacho",
+  "risk": "2",
+  "title": "Vaults collateral asset’s address can’t be changed if misconfigured when the vault is deployed",
+  "issueId": 428,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/428"
+}
