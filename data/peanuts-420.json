@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "First unstake in ProtocolRewardsPool.sol will burn all esLBR staked",
+  "issueId": 420,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/420"
+}
