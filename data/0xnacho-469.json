@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xnacho",
+  "risk": "2",
+  "title": "LybraWstETHVault#depositEtherToMint() is vulnerable to potential reentrancy attacks",
+  "issueId": 469,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/469"
+}
