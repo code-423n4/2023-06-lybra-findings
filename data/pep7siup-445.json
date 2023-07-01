@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "pep7siup",
+  "risk": "3",
+  "title": "ProtocolRewardsPool.getReward() does not return expected stableToken amount",
+  "issueId": 445,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/445"
+}
