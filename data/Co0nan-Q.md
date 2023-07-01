@@ -44,3 +44,8 @@ function grabEsLBR(uint256 amount) external {
         esLBR.mint(msg.sender, amount);
     }
 ```
+
+5. Wrong address for WBETH on LybraWBETHVault
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/LybraWbETHVault.sol#L16
+
+The commented mentioned that the address of WBETH is `0xae78736Cd615f374D3085123A210448E74Fc6393` but this is the address for the `rETH` contract used in `LybraRETHVault`. The correct address is `0xa2E3356610840701BDf5611a53974510Ae27E2e1`. While this is not directly making an issue since it's just a comment, this can influence the deployer to use wrong address.
