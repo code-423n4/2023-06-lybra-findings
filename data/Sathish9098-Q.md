@@ -58,6 +58,9 @@ FILE: 2023-06-lybra/contracts/lybra/pools/LybraRETHVault.sol
 ```
 https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraRETHVault.sol#L30-L36
 
+
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L58-L70
+
 ### Recommended Mitigation
 
 Use check-effects-interactions (CEI) pattern 
