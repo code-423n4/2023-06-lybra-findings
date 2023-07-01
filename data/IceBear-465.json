@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "IceBear",
+  "risk": "2",
+  "title": "notifyRewardAmount() lacks time delay protection",
+  "issueId": 465,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/465"
+}
