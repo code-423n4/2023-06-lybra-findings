@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xRobocop",
+  "risk": "2",
+  "title": "Computation of getDutchAuctionDiscountPrice may not work as intended and may always sell collateral at a big discount price.",
+  "issueId": 406,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/406"
+}
