@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "dacian",
+  "risk": "3",
+  "title": "Attacker can repay EUSD without share loss & exploit PeUSD flash loan to extract shares",
+  "issueId": 412,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/412"
+}
