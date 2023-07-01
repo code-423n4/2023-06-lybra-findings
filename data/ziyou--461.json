@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ziyou-",
+  "risk": "2",
+  "title": "The \"_mintPeUSD\" function is unable to execute due to the rollback of the \"_checkHealth\" function.",
+  "issueId": 461,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/461"
+}
