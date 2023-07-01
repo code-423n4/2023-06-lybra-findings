@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Brenzee",
+  "risk": "2",
+  "title": "`LybraEUSDVaultBase` - provider's can get frontran in `liquidation` and `superLiquidation` calls",
+  "issueId": 415,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/415"
+}
