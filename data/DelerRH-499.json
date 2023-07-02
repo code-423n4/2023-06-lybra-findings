@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "DelerRH",
+  "risk": "3",
+  "title": "Wrong implementation of IVault interface to get vault type",
+  "issueId": 499,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/499"
+}
