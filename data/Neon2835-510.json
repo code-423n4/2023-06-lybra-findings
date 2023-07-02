@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Neon2835",
+  "risk": "3",
+  "title": "The checkRole statement of the Configurator contract is invalid, and the permission verification can be bypassed. Hackers can tamper with tokenMiner parameters and infinitely mint esLBR tokens or LBR tokens",
+  "issueId": 510,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/510"
+}
