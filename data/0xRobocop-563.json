@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xRobocop",
+  "risk": "2",
+  "title": "Super liquidation edge case where the liquidation provider does not get any rewards",
+  "issueId": 563,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/563"
+}
