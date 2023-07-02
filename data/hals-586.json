@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "hals",
+  "risk": "3",
+  "title": "Anyone can liquidate any under-collateralized positions by using any provider account without the provider’s permission.",
+  "issueId": 586,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/586"
+}
