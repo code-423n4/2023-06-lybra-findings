@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Co0nan",
+  "risk": "3",
+  "title": "Keeper will loss his reward during superLiquidation due to wrong ratio calculation.",
+  "issueId": 511,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/511"
+}
