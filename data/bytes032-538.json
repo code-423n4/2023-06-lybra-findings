@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bytes032",
+  "risk": "2",
+  "title": "rewardPerToken will be rounded down to zero",
+  "issueId": 538,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/538"
+}
