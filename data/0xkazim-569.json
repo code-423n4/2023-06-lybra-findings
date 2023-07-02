@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "3",
+  "title": "attacker can get most of `EUSD` in lybra protocol by make a malicious call to the `executeFlashloan` function",
+  "issueId": 569,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/569"
+}
