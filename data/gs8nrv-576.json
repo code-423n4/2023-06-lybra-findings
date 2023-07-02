@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "gs8nrv",
+  "risk": "2",
+  "title": "Sandwich attack on `distributeRewards`: Incorrect use of permisionless swaps",
+  "issueId": 576,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/576"
+}
