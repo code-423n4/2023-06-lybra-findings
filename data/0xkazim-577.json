@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "3",
+  "title": "the function `withdraw` will fail in `ProtocolRewardsPool` if the user calling the withdraw for the first time",
+  "issueId": 577,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/577"
+}
