@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "adeolu",
+  "risk": "3",
+  "title": "Math for conversion of stable coin amount to 18 decimals is wrong when updating rewardPerTokenStored in notifyAmount() of ProtocolRewardsPool",
+  "issueId": 592,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/592"
+}
