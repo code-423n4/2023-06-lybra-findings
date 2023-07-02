@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "azhar",
+  "risk": "3",
+  "title": "Without a proper access control attacker can drain the user's flashborrow contract if the contract gave approval to the PeUSDMainnetStableVision",
+  "issueId": 533,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/533"
+}
