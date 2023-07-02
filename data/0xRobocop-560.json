@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xRobocop",
+  "risk": "2",
+  "title": "Repay at the PeUSD vault will revert when users pay an intermediate amount between [borrowed, borrowed + fees]",
+  "issueId": 560,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/560"
+}
