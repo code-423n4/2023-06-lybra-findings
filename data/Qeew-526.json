@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Qeew",
+  "risk": "2",
+  "title": "LybraConfigurator#setFlashloanFee Insufficient Checks for Flashloan fee",
+  "issueId": 526,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/526"
+}
