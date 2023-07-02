@@ -193,6 +193,7 @@ contract Contract1 {
 
 ### [G‑04] Increments/decrements can be unchecked in for-loops
 
+**Summary**
 ```solidity
 - for (uint256 i; i < numIterations; i++) {
 + for (uint256 i; i < numIterations;) {
@@ -200,3 +201,13 @@ contract Contract1 {
 +   unchecked { ++i; }
 }
 ```
+
+### [G-05] Upgrade pragma
+
+**Summary**
+Currently the best version you can use is stable 0.8.19
+
+Why to update pragma
+- Follow best practice.
+- Using newer compiler versions and the optimizer give gas optimizations.
+- Also, additional safety checks are available for free.
