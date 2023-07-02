@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "jaraxxus",
+  "risk": "2",
+  "title": "withdraw is set to public. Anyone can bypass getUnlockTime() and skip burning esLBR and just mint LBR",
+  "issueId": 493,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/493"
+}
