@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "oxchsyston",
+  "risk": "2",
+  "title": "The _approve() and transferfrom() functions does not check for if the contract is paused.",
+  "issueId": 594,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/594"
+}
