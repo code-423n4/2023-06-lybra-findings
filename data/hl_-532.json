@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "hl_",
+  "risk": "2",
+  "title": "Understatement of `poolTotalPeUSDCirculation` amounts due to incorrect accounting after function `_repay` is called",
+  "issueId": 532,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/532"
+}
