@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "hals",
+  "risk": "2",
+  "title": "All positions are exposed to be liquidated if the chainlink oracle goes offline or the token price falls to zero.",
+  "issueId": 588,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/588"
+}
