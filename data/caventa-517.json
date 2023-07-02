@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "caventa",
+  "risk": "2",
+  "title": "Wrong if clause allows vaultBadCollateralRatio value that is larger than vaultSafeCollateralRatio value to be set",
+  "issueId": 517,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/517"
+}
