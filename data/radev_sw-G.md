@@ -134,7 +134,7 @@ File: contracts/lybra/token/PeUSDMainnetStableVision.sol
     }
 ```
 
-### [G‑02] Optimizations with assembly
+### [G‑03] Optimizations with assembly
 
 **Summary**
 1. Use assembly to check for address(0)
@@ -188,5 +188,15 @@ contract Contract1 {
             sstore(owner.slot, _msgSender)
         }
     }
+}
+```
+
+### [G‑04] Increments/decrements can be unchecked in for-loops
+
+```solidity
+- for (uint256 i; i < numIterations; i++) {
++ for (uint256 i; i < numIterations;) {
+ // ...
++   unchecked { ++i; }
 }
 ```
