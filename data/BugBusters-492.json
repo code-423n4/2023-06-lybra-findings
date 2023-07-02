@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "BugBusters",
+  "risk": "2",
+  "title": "DOS in rewards in synthetix derivative contracts.",
+  "issueId": 492,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/492"
+}
