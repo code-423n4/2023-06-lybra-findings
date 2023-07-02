@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "cartlex_",
+  "risk": "2",
+  "title": "Price feed in `stakedLBRLpValue` is not sufficiently validated and can return stale price.",
+  "issueId": 554,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/554"
+}
