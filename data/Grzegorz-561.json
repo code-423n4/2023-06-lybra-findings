@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Grzegorz",
+  "risk": "2",
+  "title": "Incorrect max keeper ratio check leading to max keeper ratio 100x lower than intended",
+  "issueId": 561,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/561"
+}
