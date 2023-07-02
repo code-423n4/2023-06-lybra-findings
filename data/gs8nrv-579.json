@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "gs8nrv",
+  "risk": "3",
+  "title": "Incorrect debt accounting in `LybraPeUSDVaultBase.sol`",
+  "issueId": 579,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/579"
+}
