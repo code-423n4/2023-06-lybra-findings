@@ -134,12 +134,14 @@ File: contracts/lybra/token/PeUSDMainnetStableVision.sol
     }
 ```
 
-### [G‑02] Use assembly to check for address(0)
+### [G‑02] Optimizations with assembly
 
 **Summary**
-Use assembly to check for address(0)
+1. Use assembly to check for address(0)
+2. Use assembly to write storage values
+3. Use assembly for math (add, sub, mul, div)
 
-**Instances of this issue:**
+**Instances of issue 1 (zero address checking):**
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L367-L368
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L392-L393
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L412
@@ -157,7 +159,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L111`
 
 
-**Example of using assembly for zero address check** 
+Example of using assembly for zero address check
 ```solidity
     function assemblyOwnerNotZero(address _addr) public pure {
         assembly {
@@ -167,4 +169,24 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base
             }
         }
     }
+```
+
+**Instances of issue 2 (write storage values):**
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L154
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L201
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L249
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L269
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L335
+
+Example of using assembly to write storage values
+```solidity
+contract Contract1 {
+    address owner = 0xb4c79daB8f259C7Aee6E5b2Aa729821864227e84;
+
+    function assemblyUpdateOwner() public {
+        assembly {
+            sstore(owner.slot, _msgSender)
+        }
+    }
+}
 ```
