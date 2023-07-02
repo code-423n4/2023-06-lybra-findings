@@ -8,8 +8,8 @@
 | [G-04] | Hardcode address instead of using `address(this)` | 40 |
 | [G-05] | Structs can be packed into fewer storage slots | 2 |
 | [G-06] | Change `public` function visibility to `external` when appropriate | 32 |
-
-
+| [G-07] | Avoid multiple check combinations by using nested `if` statements | 4 |
+| [G-08] | Using `uint`/`int`s smaller than 32 bytes incurs overhead | 7 |
 
 
 ### [G-01] Expressions for constant values such as calling `keccak256()` should use `immutable` rather than `constant`
@@ -457,3 +457,77 @@ File: PeUSDMainnetStableVision.sol
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/vision/PeUSDMainnetStableVision.sol#L175
 
 
+### [G-07] Avoid multiple check combinations by using nested `if` statements
+
+Using nested `if` statements is cheaper than using multiple check combinations with `&&`.
+
+*There are 4 instances of this issue:*
+```solidity
+File: LybraEUSDVaultBase.sol
+204:         if (msg.sender != provider && onBehalfOfCollateralRatio >= 1e20 + configurator.vaultKeeperRatio(address(this)) * 1e18) {
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L204
+```solidity
+File: LBR.sol
+64:         if (_from != address(this) && _from != spender)
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/LBR.sol#L64
+```solidity
+File: PeUSD.sol
+46:         if (_from != address(this) && _from != spender)
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSD.sol#L46
+```solidity
+File: PeUSDMainnetStableVision.sol
+199:         if (_from != address(this) && _from != spender)
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSDMainnetStableVision.sol#L199
+
+
+
+### [G-08] Using `uint`/`int`s smaller than 32 bytes incurs overhead
+
+Using elements smaller than 32 bytes can lead to increased gas usage, because the EVM processes data in 32-byte chunks. When working with smaller elements such as `uint16`, the EVM requires additional operations to adjust the size from 32 bytes to the desired size, resulting in higher gas consumption.
+
+*There are 7 instances of this issue:*
+```solidity
+File: PeUSDMainnetStableVision.sol
+99:         uint16 dstChainId,
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSDMainnetStableVision.sol#L99
+
+```solidity
+File: LybraGovernance.sol
+20:         uint8 support;
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/governance/LybraGovernance.sol#L20
+
+```solidity
+File: LybraEUSDVaultBase.sol
+30:     uint8 immutable vaultType = 0;
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L30
+
+```solidity
+File: LybraPeUSDVaultBase.sol
+18:     uint8 immutable vaultType = 1;
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L18
+
+```solidity
+File: LBR.sol
+20:         uint8 decimals = decimals();
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/LBR.sol#L20
+
+```solidity
+File: PeUSD.sol
+12:         uint8 decimals = decimals();
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSD.sol#L12
+
+```solidity
+File: PeUSDMainnetStableVision.sol
+58:         uint8 decimals = decimals();
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSDMainnetStableVision.sol#L58
