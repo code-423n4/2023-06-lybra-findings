@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Grzegorz",
+  "risk": "3",
+  "title": "ProtocolRewardsPool.stake - Only addresses whitelisted as tokenMiner can stake / unstake LBR tokens",
+  "issueId": 572,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/572"
+}
