@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "check for amount > 0 are missed in `notifyRewardAmount` function in `StakingRewardsV2`",
+  "issueId": 580,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/580"
+}
