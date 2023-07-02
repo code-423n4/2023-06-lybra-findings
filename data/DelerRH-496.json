@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "DelerRH",
+  "risk": "2",
+  "title": "Bad collateral ratio should be at least 10% lower than safe collateral ratio on peUSD base pools",
+  "issueId": 496,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/496"
+}
