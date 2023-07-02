@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "2",
+  "title": "`vaultMintFeeApy` may not be configured for some vaults and hence protocol will not collect fees for some time",
+  "issueId": 543,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/543"
+}
