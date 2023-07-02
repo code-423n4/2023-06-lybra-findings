@@ -4,9 +4,8 @@
 | ------ | ------------------------------------------------------------------------------------- | ------------ |
 | [L-01] | The collateralAmount and getClaimAbleLBR have an accuracy error                       | Low          |
 | [L-02] | The extraRatio and rewardRatio updates should pass through the time lock              | Low          |
-| [L-03] | There is arbitrage space in direct using of oracle price to mint                      | Low          |
-| [L-04] | StakedLBRLpValue value can be manipulated                                             | Low          |
-| [L-05] | There are accuracy problems in EUSD internal accounting calculations                  | Low          |
+| [L-03] | StakedLBRLpValue value can be manipulated                                             | Low          |
+| [L-04] | There are accuracy problems in EUSD internal accounting calculations                  | Low          |
 | [N-01] | Decimals for collateral and USD may not be equal                                      | Non-Critical |
 | [N-02] | ProtocolRewardsPool getReward event parameter miscalculation                          | Non-Critical |
 
@@ -45,18 +44,7 @@ It should be updated with a time lock so that most users have time to claim thei
 
 The extraRatio and rewardRatio updates should pass through the time lock
 
-# [L-03] There is arbitrage space in direct using of oracle price to mint
-
-## Description
-
-There is a [threshold limit](https://data.chain.link/ethereum/mainnet/crypto-usd/eth-usd) for the price update of the oracle. Arbitrageurs can take advantage of spot price differences.    
-For `ETH/USD`, the update threshold limit is `0.5%`, this means that when the ETH oracle price is 1000, the spot price is between 995 and 1005, and there is a space for arbitrage. Arbitrageurs can use the old price to mint tokens in vault and then sell them in the spot market for arbitrage, or take the opposite path.    
-
-## Recommendations
-
-Add a 0.5% mint fee
-
-# [L-04] StakedLBRLpValue value can be manipulated
+# [L-03] StakedLBRLpValue value can be manipulated
 
 ## Description
 
@@ -67,7 +55,7 @@ However, if an external contract invokes this interface, it may cause a loss. It
 
 Use reserve rather than balance to calculate the lp value.  
 
-# [L-05] There are accuracy problems in EUSD internal accounting calculations
+# [L-04] There are accuracy problems in EUSD internal accounting calculations
 
 ## Description
 
