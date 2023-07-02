@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "hl_",
+  "risk": "3",
+  "title": "Incorrect accounting of remaining PeUSD borrowed when function `_repay` is called, resulting in loss of funds",
+  "issueId": 529,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/529"
+}
