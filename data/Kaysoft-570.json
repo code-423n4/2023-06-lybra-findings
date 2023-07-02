@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Kaysoft",
+  "risk": "3",
+  "title": "Every `transfer` transaction with the esLBR contract will revert causing the transaction to fail.",
+  "issueId": 570,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/570"
+}
