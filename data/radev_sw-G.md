@@ -133,3 +133,38 @@ File: contracts/lybra/token/PeUSDMainnetStableVision.sol
         require(!configurator.vaultBurnPaused(msg.sender), "BPP");
     }
 ```
+
+### [G‑02] Use assembly to check for address(0)
+
+**Summary**
+Use assembly to check for address(0)
+
+**Instances of this issue:**
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L367-L368
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L392-L393
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L412
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L441
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L460
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol#L98-L101
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L99
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L127
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol#L141
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L83
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L97
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol#L111`
+
+
+**Example of using assembly for zero address check** 
+```solidity
+    function assemblyOwnerNotZero(address _addr) public pure {
+        assembly {
+            if iszero(_addr) {
+                mstore(0x00, "zero address")
+                revert(0x00, 0x20)
+            }
+        }
+    }
+```
