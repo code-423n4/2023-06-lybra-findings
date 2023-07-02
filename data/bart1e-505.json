@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "2",
+  "title": "Incorrect interfaces in `LybraWBETHVault.sol` and `LybraRETHVault.sol`",
+  "issueId": 505,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/505"
+}
