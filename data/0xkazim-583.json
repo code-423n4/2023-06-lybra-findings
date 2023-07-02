@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "2",
+  "title": "the function `_min` should return the minimum number between x,y",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/583"
+}
