@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "2",
+  "title": "There is no mechanism protecting from slippage and there is no deadline when calling `rigidRedemption` and `liquidation`",
+  "issueId": 534,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/534"
+}
