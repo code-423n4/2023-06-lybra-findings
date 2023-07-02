@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "CrypticShepherd",
+  "risk": "2",
+  "title": "Voting period and voting delay in governance module are too short",
+  "issueId": 546,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/546"
+}
