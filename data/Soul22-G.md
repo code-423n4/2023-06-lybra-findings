@@ -1,0 +1,1 @@
+SafeMath is unnecessary in Solidity versions 0.8.0 or higher, as it is already incorporated.
