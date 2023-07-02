@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "No check if price derived from Chainlink is not negative",
+  "issueId": 498,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/498"
+}
