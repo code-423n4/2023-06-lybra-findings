@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "turvy_fuzz",
+  "risk": "3",
+  "title": "Denial of service attack on honest user",
+  "issueId": 551,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/551"
+}
