@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "btk",
+  "risk": "3",
+  "title": "Users may abuse `#Configurator.becomeRedemptionProvider()` function to boost their rewards",
+  "issueId": 535,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/535"
+}
