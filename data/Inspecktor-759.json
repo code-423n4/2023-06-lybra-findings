@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Inspecktor",
+  "risk": "2",
+  "title": "Use call() instead of transfer() when passing tokens to LybraConfigurator, ProtocolRewardsPool, LybraEUSDVaultBase",
+  "issueId": 759,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/759"
+}
