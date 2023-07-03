@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "LaScaloneta",
+  "risk": "2",
+  "title": "`StakingRewardsV2` does not impose any restriction regarding `esLBRBoost` unlock time",
+  "issueId": 838,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/838"
+}
