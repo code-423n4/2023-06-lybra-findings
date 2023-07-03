@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "3",
+  "title": "setvaultBurnPaused() logic from LybraConfigurator is not implemented in the vaults",
+  "issueId": 636,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/636"
+}
