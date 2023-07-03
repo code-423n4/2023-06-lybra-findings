@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "2",
+  "title": "No input validation in `StakingRewardsV2::setRewardsDuration` and `StakingRewardsV2::notifyRewardAmount`",
+  "issueId": 664,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/664"
+}
