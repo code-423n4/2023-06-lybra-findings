@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xMAKEOUTHILL",
+  "risk": "3",
+  "title": "Owner will be address(0) because it is not initialized",
+  "issueId": 877,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/877"
+}
