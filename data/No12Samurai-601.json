@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "No12Samurai",
+  "risk": "2",
+  "title": "Flawed Withdrawal Penalty Calculation in `LybraEUSDVaultBase`",
+  "issueId": 601,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/601"
+}
