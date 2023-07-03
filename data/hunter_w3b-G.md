@@ -2,25 +2,28 @@
 
 # Summary
 
-| Number | Optimization Details                                                                                                      | Context |
-| :----: | :------------------------------------------------------------------------------------------------------------------------ | :-----: |
-| [G-01] | Avoid contract `existence` checks by using low level calls                                                                |    1    |
-| [G-02] | Using fixed bytes is cheaper than using `string`                                                                          |    2    |
-| [G-03] | Expressions for `constant` values such as a call to keccak256(), should use immutable rather than constant                |    7    |
-| [G-04] | Using `calldata` instead of `memory` for read-only arguments                                                              |    7    |
-| [G-05] | Before some functions, we should `check` some variables for possible gas save                                             |    8    |
-| [G-06] | `LybraPeUSDVaultBase::LybraPeUSDVaultBase()` function not called by the contract should be removed to save deployment gas |    1    |
-| [G-07] | Duplicated `require()` checks should be refactored to a modifier or function                                              |   18    |
-| [G-08] | Use constants instead of `type(uintx).max`                                                                                |    1    |
-| [G-09] | Use double `require` instead of using &&                                                                                  |    3    |
-| [G-10] | A `modifier` used only once should be inlined to save gas                                                                 |    3    |
-| [G-11] | Refactor event to avoid `emitting` data that is already present in transaction data                                       |   26    |
-| [G-12] | Use hardcode address instead `address(this)`                                                                              |   38    |
-| [G-13] | Use Assembly To Check For `address(0)`                                                                                    |   16    |
-| [G-14] | When possible, use assembly instead of `unchecked{++i}`                                                                   |    2    |
-| [G-15] | Use nested if and, avoid multiple check combinations `&&`                                                                 |    4    |
-| [G-16] | Sort Solidity operations using `short-circuit` mode                                                                       |    2    |
-| [G-17] | Ternary operation is cheaper than `if-else` statement                                                                     |    2    |
+| Number | Optimization Details                                                                | Context |
+| :----: | :---------------------------------------------------------------------------------- | :-----: |
+| [G-01] | Avoid contract `existence` checks by using low level calls                          |    1    |
+| [G-02] | Using fixed bytes is cheaper than using `string`                                    |    2    |
+| [G-03] |                                                                                     |    7    |
+| [G-04] | Using `calldata` instead of `memory` for read-only arguments                        |    7    |
+| [G-05] | Before some functions, we should `check` some variables for possible gas save       |    8    |
+| [G-06] |                                                                                     |    1    |
+| [G-07] | Duplicated `require()` checks should be refactored to a modifier or function        |   18    |
+| [G-08] | Use constants instead of `type(uintx).max`                                          |    1    |
+| [G-09] | Use double `require` instead of using &&                                            |    3    |
+| [G-10] | A `modifier` used only once should be inlined to save gas                           |    3    |
+| [G-11] | Refactor event to avoid `emitting` data that is already present in transaction data |   26    |
+| [G-12] | Use hardcode address instead `address(this)`                                        |   38    |
+| [G-13] | Use Assembly To Check For `address(0)`                                              |   16    |
+| [G-14] | When possible, use assembly instead of `unchecked{++i}`                             |    2    |
+| [G-15] | Use nested if and, avoid multiple check combinations `&&`                           |    4    |
+| [G-16] | Sort Solidity operations using `short-circuit` mode                                 |    2    |
+| [G-17] | Ternary operation is cheaper than `if-else` statement                               |    2    |
+| [G-18] | Use `assembly` to write address storage values                                      |   12    |
+| [G-19] | Make 3 event `parameters` indexed when possible                                     |   37    |
+| [G-20] | use `mappings` instead of arrays                                                    |    2    |
 
 ## [G-01] Avoid contract `existence` checks by using low level calls
 
@@ -1285,4 +1288,213 @@ index 0a66f6e..a66648a 100644
 +     return _totalShares == 0 ? 0 : _sharesAmount.mul(_totalSupply).div(_totalShares);
      }
 
+```
+
+## [G-18] Use assembly to write address storage values
+
+By using assembly to write to address storage values, you can bypass some of these operations and lower the gas cost of writing to storage. Assembly code allows you to directly access the Ethereum Virtual Machine (EVM) and perform low-level operations that are not possible in Solidity.
+
+example of using assembly to write to address storage values:
+
+```
+
+    address private myAddress;
+
+    function setAddressUsingAssembly(address newAddress) public {
+        assembly {
+            sstore(0, newAddress)
+        }
+    }
+
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol
+
+```solidity
+File: /contracts/lybra/configuration/LybraConfigurator.sol
+
+
+81    GovernanceTimelock = IGovernanceTimelock(_dao);
+
+82    curvePool = ICurvePool(_curvePool);
+
+138   lybraProtocolRewardsPool = IProtocolRewardsPool(addr);
+
+148   eUSDMiningIncentives = IeUSDMiningIncentives(addr);
+
+262   stableToken = _token;
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+```solidity
+File: /contracts/lybra/miner/EUSDMiningIncentives.sol
+
+
+86   esLBR = _eslbr;
+
+90   lbrPriceFeed = AggregatorV3Interface(_lbrOracle);
+
+116  esLBRBoost = IesLBRBoost(_boost);
+
+125  ethlbrStakePool = _pool;
+
+126  ethlbrLpToken = _lp;
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/ProtocolRewardsPool.sol
+
+```solidity
+File: /contracts/lybra/miner/ProtocolRewardsPool.sol
+
+55  esLBRBoost = IesLBRBoost(_boost);
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/LybraRETHVault.sol
+
+```solidity
+File: /contracts/lybra/pools/LybraRETHVault.sol
+
+43   rkPool = IRkPool(addr);
+```
+
+## [G-19] Make 3 event `parameters` indexed when possible
+
+It’s the most gas efficient to make up to 3 event parameters indexed. If there are less than 3 parameters, you need to make all parameters indexed.
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+```solidity
+File: /contracts/lybra/miner/EUSDMiningIncentives.sol
+
+59    event ClaimReward(address indexed user, uint256 amount, uint256 time);
+
+60    event ClaimedOtherEarnings(address indexed user, address indexed Victim, uint256 buyAmount, uint256 biddingFee, bool useEUSD, uint256 time);
+
+61    event NotifyRewardChanged(uint256 addAmount, uint256 time);
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol
+
+```solidity
+File: /contracts/lybra/configuration/LybraConfigurator.sol
+
+63  event RedemptionFeeChanged(uint256 newSlippage);
+
+64    event SafeCollateralRatioChanged(address indexed pool, uint256 newRatio);
+
+65  event RedemptionProvider(address indexed user, bool status);
+
+66    event ProtocolRewardsPoolChanged(address indexed pool, uint256 timestamp);
+
+67    event EUSDMiningIncentivesChanged(address indexed pool, uint256 timestamp);
+
+68    event BorrowApyChanged(address indexed pool, uint256 newApy);
+
+69    event KeeperRatioChanged(address indexed pool, uint256 newSlippage);
+
+70  event tokenMinerChanges(address indexed pool, bool status);
+
+74  event FlashloanFeeUpdated(uint256 fee);
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/ProtocolRewardsPool.sol#L42-L46
+
+```solidity
+File: /contracts/lybra/miner/ProtocolRewardsPool.sol
+
+42   event Restake(address indexed user, uint256 amount, uint256 time);
+
+43    event StakeLBR(address indexed user, uint256 amount, uint256 time);
+
+44    event UnstakeLBR(address indexed user, uint256 amount, uint256 time);
+
+45    event WithdrawLBR(address indexed user, uint256 amount, uint256 time);
+
+46    event ClaimReward(address indexed user, uint256 eUSDAmount, address token, uint256 tokenAmount, uint256 time);
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol
+
+```solidity
+File: /contracts/lybra/miner/stakerewardV2pool.sol
+
+44  event StakeToken(address indexed user, uint256 amount, uint256 time);
+
+    event WithdrawToken(address indexed user, uint256 amount, uint256 time);
+
+    event ClaimReward(address indexed user, uint256 amount, uint256 time);
+
+    event NotifyRewardChanged(uint256 addAmount, uint256 time);
+
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraEUSDVaultBase.sol
+
+```solidity
+File: /contracts/lybra/pools/base/LybraEUSDVaultBase.sol
+
+    event DepositEther(address indexed onBehalfOf, address asset, uint256 etherAmount, uint256 assetAmount, uint256 timestamp);
+
+    event DepositAsset(address indexed onBehalfOf, address asset, uint256 amount, uint256 timestamp);
+
+    event WithdrawAsset(address sponsor, address asset, address indexed onBehalfOf, uint256 amount, uint256 timestamp);
+
+    event Mint(address sponsor, address indexed onBehalfOf, uint256 amount, uint256 timestamp);
+
+    event Burn(address sponsor, address indexed onBehalfOf, uint256 amount, uint256 timestamp);
+
+    event LiquidationRecord(address provider, address keeper, address indexed onBehalfOf, uint256 eusdamount, uint256 liquidateEtherAmount, uint256 keeperReward, bool superLiquidation, uint256 timestamp);
+
+    event LSDValueCaptured(uint256 stETHAdded, uint256 payoutEUSD, uint256 discountRate, uint256 timestamp);
+
+    event RigidRedemption(address indexed caller, address indexed provider, uint256 eusdAmount, uint256 collateralAmount, uint256 timestamp);
+
+
+
+    event FeeDistribution(address indexed feeAddress, uint256 feeAmount, uint256 timestamp);
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol
+
+```solidity
+File: /contracts/lybra/pools/base/LybraPeUSDVaultBase.sol
+
+    event DepositEther(address indexed onBehalfOf, address asset, uint256    etherAmount, uint256 assetAmount, uint256 timestamp);
+
+    event DepositAsset(address indexed onBehalfOf, address asset, uint256 amount, uint256 timestamp);
+
+    event WithdrawAsset(address sponsor, address indexed onBehalfOf, address asset, uint256 amount, uint256 timestamp);
+
+    event Mint(address sponsor, address indexed onBehalfOf, uint256 amount, uint256 timestamp);
+
+    event Burn(address sponsor, address indexed onBehalfOf, uint256 amount, uint256 timestamp);
+
+    event LiquidationRecord(address provider, address keeper, address indexed onBehalfOf, uint256 eusdamount, uint256 LiquidateAssetAmount, uint256 keeperReward, bool superLiquidation, uint256 timestamp);
+
+    event RigidRedemption(address indexed caller, address indexed provider, uint256 peusdAmount, uint256 assetAmount, uint256 timestamp);
+
+    event FeeDistribution(address indexed feeAddress, uint256 feeAmount, uint256 timestamp);
+```
+
+## [G-20] use `mappings` instead of arrays
+
+Arrays are useful when you need to maintain an ordered list of data that can be iterated over, but they have a higher gas cost for read and write operations, especially when the size of the array is large. This is because Solidity needs to iterate over the entire array to perform certain operations, such as finding a specific element or deleting an element.
+
+Mappings, on the other hand, are useful when you need to store and access data based on a key, rather than an index. Mappings have a lower gas cost for read and write operations, especially when the size of the mapping is large, since Solidity can perform these operations based on the key directly, without needing to iterate over the entire data structure.
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/esLBRBoost.sol#L8
+
+```solidity
+File: /contracts/lybra/miner/esLBRBoost.sol
+
+8    esLBRLockSetting[] public esLBRLockSettings;
+```
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/EUSDMiningIncentives.sol#L33
+
+```solidity
+File: /contracts/lybra/miner/EUSDMiningIncentives.sol
+
+33   address[] public pools;
 ```
