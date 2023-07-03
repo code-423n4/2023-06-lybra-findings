@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "devival",
+  "risk": "2",
+  "title": "Wrong WBETH contract address in `LybraWbETHVault.sol`",
+  "issueId": 960,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/960"
+}
