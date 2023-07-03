@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "LokiThe5th",
+  "risk": "3",
+  "title": "`LybraRETHVault.sol` cannot accept calls to `depositEtherToMint`, effectively bricking the contract from accepting ether deposits",
+  "issueId": 693,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/693"
+}
