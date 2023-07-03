@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "seerether",
+  "risk": "3",
+  "title": "a malicious sender can perform multiple transfers using the same allowance, exceeding the approved limit.",
+  "issueId": 842,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/842"
+}
