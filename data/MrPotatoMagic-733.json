@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "MrPotatoMagic",
+  "risk": "2",
+  "title": "assetAmount conversion to Wei units required in order to be compared to 1 ether correctly",
+  "issueId": 733,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/733"
+}
