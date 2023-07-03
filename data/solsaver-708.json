@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "solsaver",
+  "risk": "2",
+  "title": "The `approve` method in `EUSD.sol` is enables attacker to use both previous approved amount and the new approved ",
+  "issueId": 708,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/708"
+}
