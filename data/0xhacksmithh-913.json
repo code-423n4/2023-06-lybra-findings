@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xhacksmithh",
+  "risk": "2",
+  "title": "Return Value Of `etherOracle.fetchPrice()` Not Check And Used Directly, Which Will Cause Problem When Wrong Value (or even 0) Returned By Oracle.",
+  "issueId": 913,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/913"
+}
