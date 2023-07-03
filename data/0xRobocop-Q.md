@@ -42,3 +42,16 @@ function checkRole(bytes32 role, address _sender) public view  returns(bool){
 ```
 
 It means that only admin or dao can call it, althoug timelock is a role greater than admin.
+
+
+# L-03 getClaimableUSD view function at the ProtocolRewardsPool contract returns an incorrect value.
+
+The function is coded as follows:
+
+```solidity
+function getClaimAbleUSD(address user) external view returns (uint256 amount) {
+   amount = IEUSD(configurator.getEUSDAddress()).getMintedEUSDByShares(earned(user));
+}
+```
+
+The function treats all the tokens a user earns as EUSD shares which is false since some rewards are PeUSD and USDC tokens. Because it is expected that 1 EUSD share > 1 EUSD token, then this function may return a greater value than it should. The incorrect returned value may cause integration issues with 3rd party applications.
