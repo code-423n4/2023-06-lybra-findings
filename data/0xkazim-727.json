@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "3",
+  "title": "an attacker can take over %50 of the voting power using flashloan attacks",
+  "issueId": 727,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/727"
+}
