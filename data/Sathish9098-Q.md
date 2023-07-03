@@ -2,7 +2,7 @@
 
 ##
 
-## [L-] Divide by zero should be avoided 
+## [L-1] Divide by zero should be avoided 
 
 ### Impact
 Division by zero should be avoided in Solidity and in any programming language. Division by zero is an undefined operation, and it can lead to unexpected and unpredictable results. In Solidity, division by zero will cause the contract to revert. This means that the transaction will be canceled, and the caller will not receive any funds or tokens
@@ -23,7 +23,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be6
 
 ##
 
-## [L-] Lack of ``check-effects-interactions (CEI) pattern`` is vulnerable to ``reentrancy attacks``
+## [L-2] Lack of ``check-effects-interactions (CEI) pattern`` is vulnerable to ``reentrancy attacks``
 
 ### Impact
 In the function ``depositEtherToMint``, the state change of minting ``PEUSD`` is performed after the external call to the IWBETH contract. This means that an attacker could call the IWBETH contract and then call the ``_mintPeUSD`` function before the state change of minting PEUSD has been completed. This could allow the attacker to mint more PEUSD than they are entitled to, which could create a security risk
@@ -67,7 +67,7 @@ Use check-effects-interactions (CEI) pattern
 
 ##
 
-## [L-] Shadowed variable should be avoided 
+## [L-3] Shadowed variable should be avoided 
 
 ### Impact
 
@@ -95,5 +95,102 @@ https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be6
 
 ### Recommended Mitigation
 Avoid using the same name for a variable and a function
+
+##
+
+## [L-4] User could deposit a small amount of ``ether`` and then ``mint`` a large amount of ``PEUSD``, which could create a security risk
+
+### Impact
+if a user deposits ``1 ether`` and mints ``100,000 PEUSD``, they would have a large amount of ``PEUSD`` that they could then use to buy up a large amount of ``esLBR``. This could then give them control of a large portion of the ``ProtocolRewardsPool``contract, which could allow them to manipulate the rewards distribution.
+
+### POC
+
+```solidity
+FILE: 2023-06-lybra/contracts/lybra/pools/LybraWbETHVault.sol
+
+function depositEtherToMint(uint256 mintAmount) external payable override {
+        require(msg.value >= 1 ether, "DNL");
+        uint256 preBalance = collateralAsset.balanceOf(address(this));
+        IWBETH(address(collateralAsset)).deposit{value: msg.value}(address(configurator));
+        uint256 balance = collateralAsset.balanceOf(address(this));
+        depositedAsset[msg.sender] += balance - preBalance;
+
+        if (mintAmount > 0) {
+            _mintPeUSD(msg.sender, msg.sender, mintAmount, getAssetPrice());
+        }
+
+```
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraWbETHVault.sol#L20-L32
+
+### Recommended Mitigation
+The ``depositEtherToMint()`` function could be modified to limit the amount of PEUSD that a user can mint. The function could be modified to only allow a user to ``mint`` a certain ``percentage of the amount`` of ``ether`` that they ``deposit``.
+
+##
+
+## [L-5] Use the ``safeAllowance()`` function instead of the normal ``approve()`` function
+
+### Impact
+- It does not check if the ``spender`` has ``already transferred`` the requested ``amount`` of tokens
+- It is not as secure as the ``safeAllowance()`` function
+
+The ``safeAllowance()`` function first checks if the spender has already been approved for the requested amount of tokens. If they have not, the function approves the spender for the requested amount of tokens and then checks if the spender has already transferred the requested amount of tokens. If they have, the function reverts. This helps to prevent malicious spenders from transferring tokens that they have not been approved to transfer.
+
+- It is more complex than the safeAllowance() function
+
+### POC
+
+```solidity
+FILE: 2023-06-lybra/contracts/lybra/pools/LybraWstETHVault.sol
+
+35: lido.approve(address(collateralAsset), msg.value);
+
+```
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/pools/LybraWstETHVault.sol#L35C59-L35C59
+
+### Recommended Mitigation
+Use ``safeAllowance()`` for better security 
+
+##
+
+## [L-6] Use ``call`` instead of ``transfer`` to send ethers
+
+ ### Impact
+``.transfer`` will relay ``2300 gas`` and ``.call`` will relay all the gas. If the receive/fallback function from the recipient proxy contract has complex logic, using .transfer will fail, causing ``integration`` issues
+
+### POC
+
+```solidity
+FILE: 2023-06-lybra/contracts/lybra/pools/base/LybraPeUSDVaultBase.sol
+
+139: collateralAsset.transfer(msg.sender, reducedAsset);
+142: collateralAsset.transfer(provider, reducedAsset - reward2keeper);
+143: collateralAsset.transfer(msg.sender, reward2keeper);
+
+```
+
+### Recommended Mitigation
+Replace ``.transfer`` with ``.call``. Note that the result of ``.call`` need to be ``checked``
+
+##
+
+## [L-7] Timelocks not implemented as per documentation 
+
+`` Does it use a timelock function?:  True``
+
+### Impact 
+- If a user accidentally transfers their tokens to the wrong address, or if a malicious actor gains access to a user's wallet, the tokens can be transferred to the attacker's address without any delay.
+
+### Recommended Mitigation
+Implement time locks as per documentations 
+
+##
+
+## [L-8] 
+
+
+
+
+
+
 
 
