@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "IceBear",
+  "risk": "2",
+  "title": "EUSDMiningIncentives.setRewardsDuration allows setting near zero or enormous duration, which breaks reward logic",
+  "issueId": 730,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/730"
+}
