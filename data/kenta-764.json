@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "kenta",
+  "risk": "2",
+  "title": "Wrong calculation of the poolTotalPeUSDCirculation in the LybraPeUSDVaultBase.sol.",
+  "issueId": 764,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/764"
+}
