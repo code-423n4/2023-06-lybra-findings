@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "3",
+  "title": "badCollateralRatio cannot be changed in LybraEUSDVaultBase.sol as it's initialized as immutable variable",
+  "issueId": 622,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/622"
+}
