@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "nadin",
+  "risk": "2",
+  "title": "CHAINLINK ORACLE RETURN VALUES ARE NOT HANDLED PROPERTY, MAY RETURN STALE OR INCORRECT RESULT",
+  "issueId": 616,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/616"
+}
