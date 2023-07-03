@@ -1,0 +1,1 @@
+The contract emits some events, but not all state-changing operations are covered. For example, there is no event emitted when lidoRebaseTime is changed, which would be useful for tracking changes.
