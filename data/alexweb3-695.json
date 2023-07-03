@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "alexweb3",
+  "risk": "2",
+  "title": "The maximum reward ratio for the liquidator after liquidation is 100 times smaller than what it was intended to be in the function setKeeperRatio",
+  "issueId": 695,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/695"
+}
