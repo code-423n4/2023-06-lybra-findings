@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "alexweb3",
+  "risk": "3",
+  "title": "Incorrectly implemented modifiers in LybraConfigurator.sol allow any address to call functions that are supposed to be restricted",
+  "issueId": 704,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/704"
+}
