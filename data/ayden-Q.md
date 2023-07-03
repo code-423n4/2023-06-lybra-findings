@@ -47,13 +47,13 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/Prot
 
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L147#L150
 
-4.`unlockPrematurely` should ensure user `time2fullRedemption` > 0
+4.`unlockPrematurely` should ensure user `time2fullRedemption` > block.timestamp or this function will revert.
 
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/ProtocolRewardsPool.sol#L129#L145
 
 ```solidity
     function unlockPrematurely() external {
-+       require(time2fullRedemption[msg.sender]>0);
++       require(time2fullRedemption[msg.sender]> block.timestamp);
         require(
             block.timestamp + exitCycle - 3 days >
                 time2fullRedemption[msg.sender],
