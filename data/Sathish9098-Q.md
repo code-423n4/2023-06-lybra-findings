@@ -1,8 +1,29 @@
 # LOW FINDINGS
 
+| LOW COUNT | ISSUES | INSTANCES |
+|-----------------|-----------------|-----------------|
+| [L-1] | ``assetAmount * 2 <= depositedAsset[onBehalfOf]`` check is conflict with docs  | 1 |
+| [L-2] | Lack of ``check-effects-interactions (CEI) pattern`` is vulnerable to ``reentrancy attacks`` | 3 |
+| [L-3] | User could deposit a small amount of ``ether`` and then ``mint`` a large amount of ``PEUSD``, which could create a security risk | 1 |
+| [L-4] | Use the ``safeAllowance()`` function instead of the normal ``approve()`` function | 1 |
+| [L-5] | Use ``call`` instead of ``transfer`` to send ethers | 3 |
+| [L-6] | ``Timelocks`` not implemented as per documentation  | - |
+| [L-7] | ``depositAssetToMint()`` does not check for a maximum limit on asset deposits | 1 |
+| [L-8] | Project Upgrade and Stop Scenario should be | - |
+| [L-9] | Lack of ``nonReentrant`` modifiers for critical external functions  | 1 |
+| [L-10] | ``Divide by zero`` should be avoided  | 2 |
+| [L-11] | ````name masking`` should be avoided to ``prevent errors``  | 2 |
+| [L-12] | ``Division`` before ``multiplication`` can lead to ``precision errors`` | 2 |
+| [L-13] | ``Hardcoding addresses`` in smart contracts can make them more ``vulnerable to attack``| 1 |
+| [L-14] | ``NATSPEC comments`` should be ``increased`` in contracts| - |
+| [L-15] | ``Negative values`` may return the ``unexpected`` values when using ``uint256(int)``conversion| 1|
+| [L-16] | ``Array`` does not have a ``pop function``| 1 |
+| [L-17] | ``Setters`` should have ``initial value check``| 1 |
+| [L-18] | ``External calls`` in an ``un-bounded`` for-loop may result in a ``DOS``| 2 |
+
 ##
 
-## [L-11] ``assetAmount * 2 <= depositedAsset[onBehalfOf]`` check is conflict with docs 
+## [L-1] ``assetAmount * 2 <= depositedAsset[onBehalfOf]`` check is conflict with docs 
 
 ``* - collateralAmount should be less than 50% of collateral``
 
@@ -75,7 +96,7 @@ Use check-effects-interactions (CEI) pattern
 
 ##
 
-## [L-4] User could deposit a small amount of ``ether`` and then ``mint`` a large amount of ``PEUSD``, which could create a security risk
+## [L-3] User could deposit a small amount of ``ether`` and then ``mint`` a large amount of ``PEUSD``, which could create a security risk
 
 ### Impact
 if a user deposits ``1 ether`` and mints ``100,000 PEUSD``, they would have a large amount of ``PEUSD`` that they could then use to buy up a large amount of ``esLBR``. This could then give them control of a large portion of the ``ProtocolRewardsPool``contract, which could allow them to manipulate the rewards distribution.
@@ -104,7 +125,7 @@ The ``depositEtherToMint()`` function could be modified to limit the amount of P
 
 ##
 
-## [L-5] Use the ``safeAllowance()`` function instead of the normal ``approve()`` function
+## [L-4] Use the ``safeAllowance()`` function instead of the normal ``approve()`` function
 
 ### Impact
 - It does not check if the ``spender`` has ``already transferred`` the requested ``amount`` of tokens
@@ -129,7 +150,7 @@ Use ``safeAllowance()`` for better security
 
 ##
 
-## [L-6] Use ``call`` instead of ``transfer`` to send ethers
+## [L-5] Use ``call`` instead of ``transfer`` to send ethers
 
  ### Impact
 ``.transfer`` will relay ``2300 gas`` and ``.call`` will relay all the gas. If the receive/fallback function from the recipient proxy contract has complex logic, using .transfer will fail, causing ``integration`` issues
@@ -150,7 +171,7 @@ Replace ``.transfer`` with ``.call``. Note that the result of ``.call`` need to 
 
 ##
 
-## [L-7] ``Timelocks`` not implemented as per documentation 
+## [L-6] ``Timelocks`` not implemented as per documentation 
 
 `` Does it use a timelock function?:  True``
 
@@ -162,7 +183,7 @@ Implement time locks as per documentations
 
 ##
 
-## [L-8] ``depositAssetToMint()`` does not check for a maximum limit on asset deposits
+## [L-7] ``depositAssetToMint()`` does not check for a maximum limit on asset deposits
 
 ### This means that a user could theoretically deposit an unlimited amount of collateral asset into the contract. This could potentially lead to a number of problems,
 
@@ -198,7 +219,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be6
 
 ##
 
-## [L-9] Project Upgrade and Stop Scenario should be
+## [L-8] Project Upgrade and Stop Scenario should be
 
 At the start of the project, the system may need to be stopped or upgraded, I suggest you have a script beforehand and add it to the documentation. This can also be called an ” EMERGENCY STOP (CIRCUIT BREAKER) PATTERN “.
 
@@ -206,7 +227,7 @@ https://github.com/maxwoe/solidity_patterns/blob/master/security/EmergencyStop.s
 
 ##
 
-## [L-10] Lack of ``nonReentrant`` modifiers for critical external functions 
+## [L-9] Lack of ``nonReentrant`` modifiers for critical external functions 
 
 ### Impact
 
@@ -229,7 +250,7 @@ It would be advisable to add the ``nonReentrant`` modifier
 
 ##
 
-## [L-1] ``Divide by zero`` should be avoided 
+## [L-10] ``Divide by zero`` should be avoided 
 
 ### Impact
 Division by zero should be avoided in Solidity and in any programming language. Division by zero is an undefined operation, and it can lead to unexpected and unpredictable results. In Solidity, division by zero will cause the contract to revert. This means that the transaction will be canceled, and the caller will not receive any funds or tokens
@@ -258,7 +279,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be6
 
 ##
 
-## [L-3] ``Shadowed variable`` should be avoided 
+## [L-11] ``name masking`` should be avoided to prevent errors
 
 ### Impact
 
@@ -286,6 +307,172 @@ https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be6
 
 ### Recommended Mitigation
 Avoid using the same name for a variable and a function
+
+##
+
+## [L-12] ``Division`` before ``multiplication`` can lead to ``precision errors``
+
+### Impact
+Because Solidity integer division may truncate, it is often preferable to do multiplication before division to prevent precision loss.
+
+### POC
+
+```solidity
+FILE: Breadcrumbs2023-06-lybra/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+142: borrowed = borrowed * (1e20 + peUSDExtraRatio) / 1e20;
+
+```
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/miner/EUSDMiningIncentives.sol#L142
+
+### Recommended Mitigation
+
+```solidity
+
+142: borrowed = (borrowed * (1e20 + peUSDExtraRatio)) / 1e20;
+
+```
+
+##
+
+## [L-13] ``Hardcoding addresses`` in smart contracts can make them more ``vulnerable to attack``
+
+### Impact
+- It makes the contract more difficult to audit. This is because it is more difficult to understand how the contract works if the addresses are hardcoded.
+
+- It makes the contract more vulnerable to attack. This is because it is easier for an attacker to find a way to manipulate the values of the variables and get an incorrect result.
+
+- It makes the contract more difficult to update. This is because it is necessary to update the hardcoded addresses if the addresses of the contracts change.
+
+### POC
+```solidity
+FILE: Breadcrumbs2023-06-lybra/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+153: uint256 etherInLp = (IEUSD(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2).balanceOf(ethlbrLpToken) * uint(etherPrice)) / 1e8;
+
+```
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/miner/EUSDMiningIncentives.sol#L153
+
+### Recommended Mitigation
+``Use dynamic addresses``. Dynamic addresses are addresses that are not hardcoded into the contract. Instead, they are generated at runtime and stored in a state variable. This makes it more difficult for an attacker to manipulate the values of the variables and get an incorrect result
+
+##
+
+## [L-14] NATSPEC comments should be increased in contracts
+
+It is recommended that Solidity contracts are fully annotated using NatSpec for all public interfaces (everything in the ABI). It is clearly stated in the Solidity official documentation.
+In complex projects such as Defi, the interpretation of all functions and their arguments and returns is important for code readability and auditability.
+https://docs.soliditylang.org/en/v0.8.15/natspec-format.html
+
+Recommendation
+NatSpec comments should be increased in Contracts
+
+##
+
+## [L-15] ``Negative values`` may return the ``unexpected`` values when using ``uint256(int)`` conversion
+
+### Impact
+When converting a negative int256 value to a uint256 using ``uint256(int256)``, the result will be unexpected. if you try to convert a negative ``int256`` value to a ``uint256``, the result will be ``interpreted`` as the two's complement representation of the negative value. This means that the resulting uint256 value will be a ``large positive number``.
+
+PROOF:
+We attempt to convert the negative value ``-10`` to a ``uint256``. However, the resulting value will not be the expected value of ``-10`` but rather a ``large positive number``.
+
+If you execute the function, the returned value will be ``115792089237316195423570985008687907853269984665640564039457584007913129639934``. This result corresponds to the two's complement representation of ``-10`` when ``interpreted`` as an ``unsigned uint256``.
+
+### POC
+
+```solidity
+FILE: Breadcrumbs2023-06-lybra/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+212: (, int lbrPrice, , , ) = lbrPriceFeed.latestRoundData();
+213: biddingFee = biddingFee * uint256(lbrPrice) / 1e8;
+
+```
+
+### Recommended Mitigation
+Carefully handle ``conversions between signed and unsigned integer`` types and ensure that the values are within the ``valid ranges`` of the ``target type``.
+
+##
+
+## [L-16] ``Array`` does not have a ``pop function``
+
+### Impact
+Arrays without the pop operation in Solidity can lead to inefficient memory management and increase the likelihood of out-of-gas errors.
+
+### POC
+
+```solidity
+FILE: 2023-06-lybra/contracts/lybra/miner/esLBRBoost.sol
+
+26: esLBRLockSettings.push(esLBRLockSetting(30 days, 20 * 1e18));
+27:        esLBRLockSettings.push(esLBRLockSetting(90 days, 30 * 1e18));
+28:        esLBRLockSettings.push(esLBRLockSetting(180 days, 50 * 1e18));
+29:        esLBRLockSettings.push(esLBRLockSetting(365 days, 100 * 1e18));
+
+34:   esLBRLockSettings.push(setting);
+
+```
+
+### Recommended Mitigation
+Add ``pop`` function to avoid ``out-of-gas errors``
+
+##
+
+## [L-17] ``Setters`` should have ``initial value check``
+
+### Impact
+Setters should have initial value check to prevent assigning wrong value to the variable. Assginment of wrong value can lead to unexpected behavior of the contract.
+
+### POC
+
+```solidity
+FILE: Breadcrumbs2023-06-lybra/contracts/lybra/configuration/LybraConfigurator.sol
+
+function setMintVaultMaxSupply(address pool, uint256 maxSupply) external onlyRole(DAO) {
+        mintVaultMaxSupply[pool] = maxSupply;
+    }
+
+
+```
+
+### Recommended Mitigation
+``maxSupply`` add initial value check then assign to ``mintVaultMaxSupply[pool]``
+
+##
+
+## [L-18] External calls in an un-bounded for-loop may result in a DOS
+
+### Impact
+Consider limiting the number of iterations in for-loops that make external calls
+
+### POC
+
+```solidity
+FILE: Breadcrumbs2023-06-lybra/contracts/lybra/miner/EUSDMiningIncentives.sol
+
+for (uint i = 0; i < _pools.length; i++) {
+            require(configurator.mintVault(_pools[i]), "NOT_VAULT"); //@audit external call
+        }
+
+for (uint i = 0; i < pools.length; i++) {
+            ILybra pool = ILybra(pools[i]);
+            uint borrowed = pool.getBorrowedOf(user); //@audit external call
+            if (pool.getVaultType() == 1) {
+                borrowed = borrowed * (1e20 + peUSDExtraRatio) / 1e20;
+            }
+            amount += borrowed;
+
+```
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/miner/EUSDMiningIncentives.sol#L94-L96
+
+### Recommended Mitigation
+Ensure that loops are bounded and their iterations are reasonable and predictable
+
+##
+
+
+
+
 
 
 
