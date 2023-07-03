@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "3",
+  "title": "`ProtocolRewardsPool::notifyRewardAmount` incorrectly updates `rewardPerTokenStored` if token is a stablecoin different than `EUSD` and `PEUSD`",
+  "issueId": 722,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/722"
+}
