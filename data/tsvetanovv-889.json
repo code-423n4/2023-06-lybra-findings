@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "tsvetanovv",
+  "risk": "2",
+  "title": "`stakedLBRLpValue` not work on some L2 chains because hardcoded WETH address",
+  "issueId": 889,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/889"
+}
