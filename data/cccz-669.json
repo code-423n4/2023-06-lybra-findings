@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "cccz",
+  "risk": "3",
+  "title": "Incorrect calculation in LybraPeUSDVaultBase._repay causes users to repay less PeUSD ",
+  "issueId": 669,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/669"
+}
