@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "3",
+  "title": "No check for from!=to when transferring shares in EUSD.sol",
+  "issueId": 649,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/649"
+}
