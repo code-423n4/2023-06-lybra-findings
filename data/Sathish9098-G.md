@@ -2,6 +2,8 @@
 
 ## TABLE OF CONTENTS
 
+Total Gas saved from all findings - ``68700 GAS``
+
 ### FINDINGS
 
 - [Optimizing gas consumption with tight variable packing- Saves ``20000 GAS , 10 SLOTS``](#g-1-optimizing-gas-consumption-with-tight-variable-packing)
