@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Toshii",
+  "risk": "3",
+  "title": "Incorrect function call in LybraRETHVault implementation breaks all functionality",
+  "issueId": 847,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/847"
+}
