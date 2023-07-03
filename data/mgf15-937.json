@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "mgf15",
+  "risk": "2",
+  "title": "Price feed in EUSDMiningIncentives#purchaseOtherEarnings can return stale price or incorrect results",
+  "issueId": 937,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/937"
+}
