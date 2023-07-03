@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "bart1e",
+  "risk": "2",
+  "title": "`StakingRewardsV2::setBoost` may zero out all users' `LockStatus`es",
+  "issueId": 659,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/659"
+}
