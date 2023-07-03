@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Pechenite",
+  "risk": "2",
+  "title": "Incorrect rewards calculation in stakerewardV2pool.sol#stake()",
+  "issueId": 806,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/806"
+}
