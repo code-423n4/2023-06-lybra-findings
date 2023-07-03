@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ayden",
+  "risk": "2",
+  "title": "If the decimal places of the staketoken are not 18, the calculation of rewardPerToken will result in an error",
+  "issueId": 791,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/791"
+}
