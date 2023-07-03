@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "koo",
+  "risk": "3",
+  "title": "liquidation in PeUSD vault based pool may get Exceeding profit",
+  "issueId": 762,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/762"
+}
