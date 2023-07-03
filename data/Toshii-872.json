@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Toshii",
+  "risk": "2",
+  "title": "EUSD and PeUSD vault integration with Liquity PriceFeed contract breaks functionality for most chains",
+  "issueId": 872,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/872"
+}
