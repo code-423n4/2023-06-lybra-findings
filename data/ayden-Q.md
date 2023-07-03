@@ -45,7 +45,7 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/Prot
 
 3.Change `x <= y ? x : y` to `x < y ? x : y` save 3 gas.
 
-stakerewardV2pool.sol#L147#L150
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L147#L150
 
 4.`unlockPrematurely` should ensure user `time2fullRedemption` > 0
 
@@ -71,3 +71,8 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/Prot
         grabableAmount += burnAmount;
     }
 ```
+
+5.The "unlockPrematurely" method and "grabEsLBR" should include event logging of the user, amount, and timestamp
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/ProtocolRewardsPool.sol#L129#L145
+
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/ProtocolRewardsPool.sol#L153#L158
