@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "seerether",
+  "risk": "3",
+  "title": "Users can still transfer tokens to other accounts even when minting of tokens is temporarily disabled or paused",
+  "issueId": 848,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/848"
+}
