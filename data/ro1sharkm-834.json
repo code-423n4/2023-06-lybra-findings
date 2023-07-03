@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ro1sharkm",
+  "risk": "3",
+  "title": "Race Condition Vulnerability in depositEtherToMint Function",
+  "issueId": 834,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/834"
+}
