@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "turvy_fuzz",
+  "risk": "2",
+  "title": "Providers can lose part of reward due to lack of access control and frontrunning",
+  "issueId": 703,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/703"
+}
