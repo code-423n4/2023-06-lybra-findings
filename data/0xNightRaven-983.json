@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xNightRaven",
+  "risk": "2",
+  "title": "distributeRewards can revert because of the too strict slippage check",
+  "issueId": 983,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/983"
+}
