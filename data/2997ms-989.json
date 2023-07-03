@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "2997ms",
+  "risk": "2",
+  "title": "Reentrancy may allow a customer to steal funds",
+  "issueId": 989,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/989"
+}
