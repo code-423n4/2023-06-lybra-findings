@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ktg",
+  "risk": "3",
+  "title": "LybraGovernance's votingPeriod and votingDelay functions are implemented incorrectly",
+  "issueId": 674,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/674"
+}
