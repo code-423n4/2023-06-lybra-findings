@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "ppetrov",
+  "risk": "2",
+  "title": "Redemption Provider's collateral can go way below 100%",
+  "issueId": 844,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/844"
+}
