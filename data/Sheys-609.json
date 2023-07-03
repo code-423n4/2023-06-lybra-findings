@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Sheys",
+  "risk": "2",
+  "title": "Users can manipulate the ```_newFee's``` function to pay little to no fees.",
+  "issueId": 609,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/609"
+}
