@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "devival",
+  "risk": "3",
+  "title": "Wrong implementations of interface's function `getExchangeRate()` in `LybraWbETHVault.sol` and `LybraRETHVault.sol`",
+  "issueId": 920,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/920"
+}
