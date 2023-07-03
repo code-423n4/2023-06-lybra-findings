@@ -10,6 +10,8 @@
 | [G-06] | Change `public` function visibility to `external` when appropriate | 32 |
 | [G-07] | Avoid multiple check combinations by using nested `if` statements | 4 |
 | [G-08] | Using `uint`/`int`s smaller than 32 bytes incurs overhead | 7 |
+| [G-09] | Use assembly to check for `address(0)` | 5 |
+| [G-10] | Use constants instead of `type(uintx).max` | 1 |
 
 
 ### [G-01] Expressions for constant values such as calling `keccak256()` should use `immutable` rather than `constant`
@@ -326,103 +328,103 @@ https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/vaults/Lyb
 File: EUSD.sol
 99:     function name() public pure returns (string memory) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L99
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L99
 
 ```solidity
 File: EUSD.sol
 107:     function symbol() public pure returns (string memory) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L107
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L107
 
 ```solidity
 File: EUSD.sol
 114:     function decimals() public pure returns (uint8) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L114
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L114
 
 ```solidity
 File: EUSD.sol
 124:     function totalSupply() public view returns (uint256) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L124
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L124
 
 ```solidity
 File: EUSD.sol
 134:     function balanceOf(address _account) public view returns (uint256) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L134
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L134
 
 ```solidity
 File: EUSD.sol
 153:     function transfer(address _recipient, uint256 _amount) public returns (bool) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L153
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L153
 
 ```solidity
 File: EUSD.sol
 200:     function approve(address _spender, uint256 _amount) public returns (bool) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L200
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L200
 
 ```solidity
 File: EUSD.sol
 226:     function transferFrom(address from, address to, uint256 amount) public returns (bool) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L226
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L226
 
 ```solidity
 File: EUSD.sol
 248:     function increaseAllowance(address _spender, uint256 _addedValue) public returns (bool) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L248
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L248
 
 ```solidity
 File: EUSD.sol
 268:     function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L268
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L268
 
 ```solidity
 File: EUSD.sol
 285:     function getTotalShares() public view returns (uint256) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L285
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L285
 
 ```solidity
 File: EUSD.sol
 292:     function sharesOf(address _account) public view returns (uint256) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L292
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L292
 
 ```solidity
 File: EUSD.sol
 334:     function transferShares(address _recipient, uint256 _sharesAmount) public returns (uint256) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/EUSD.sol#L334
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L334
 
 ```solidity
 File: LBR.sol
 38:     function circulatingSupply() public view virtual override returns (uint) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/LBR.sol#L38
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/LBR.sol#L38
 
 ```solidity
 File: LBR.sol
 42:     function token() public view virtual override returns (address) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/LBR.sol#L42
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/LBR.sol#L42
 
 ```solidity
 File: PeUSD.sol
 20:     function circulatingSupply() public view virtual override returns (uint) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/PeUSD.sol#L20
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSD.sol#L20
 
 ```solidity
 File: PeUSD.sol
 24:     function token() public view virtual override returns (address) {
 ```
-https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/tokens/PeUSD.sol#L24
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSD.sol#L24
 
 ```solidity
 File: PeUSDMainnetStableVision.sol
@@ -531,3 +533,46 @@ File: PeUSDMainnetStableVision.sol
 58:         uint8 decimals = decimals();
 ```
 https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/PeUSDMainnetStableVision.sol#L58
+
+### [G-09] Use assembly to check for `address(0)`
+
+*There are 5 instances of this issue:*
+
+```solidity
+File: EUSDMiningIncentives.sol
+  76         if (_account != address(0));
+```
+[https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/EUSDMiningIncentives.sol#L76](https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/EUSDMiningIncentives.sol#L76)
+
+```solidity
+File: stakerewardV2pool.sol
+  60         if (_account != address(0));
+```
+[https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L60](https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L60)
+
+```solidity
+File: stakerewardV2pool.sol
+  132     function notifyRewardAmount(uint256 _amount) external onlyOwner updateReward(address(0));
+```
+[https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L132](https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/miner/stakerewardV2pool.sol#L132)
+
+```solidity
+File: LybraConfigurator.sol
+  99         if (address(EUSD) == address(0)) EUSD = IEUSD(_eusd);
+  100         if (address(peUSD) == address(0)) peUSD = IEUSD(_peusd);
+```
+[https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol#L99](https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol#L99)
+[https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol#L100](https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/configuration/LybraConfigurator.sol#L100)
+
+### [G-10] Use constants instead of `type(uintx).max`
+
+Using `type(uintx).max` such as `type(uint128).max` incurs more gas in distribution and for each transaction. Constants (such as `340282366920938463463374607431768211455` for `type(uint128).max`) should be used instead.
+
+
+*There is 1 instance of this issue:*
+```solidity
+File: EUSD.sol
+179:         if (currentAllowance != type(uint256).max) {
+```
+https://github.com/code-423n4/2023-06-lybra/blob/main/contracts/lybra/token/EUSD.sol#L179
+
