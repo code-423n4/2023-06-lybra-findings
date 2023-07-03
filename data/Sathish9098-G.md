@@ -2,7 +2,7 @@
 
 ## TABLE OF CONTENTS
 
-Total Gas saved from all findings - ``68700 GAS``
+Total Gas saved from all findings - ``68800 GAS``
 
 ### FINDINGS
 
@@ -36,6 +36,8 @@ Total Gas saved from all findings - ``68700 GAS``
 
 
   -  [``esLBRBoost.sol``: Use ``calldata`` instead of ``memory``: Saves ``312 GAS ``](#eslbrboostsol-use-calldata-instead-of-memory-saves-312-gas-)
+
+- [State variables should be cached outside the loop to save gas- Saves ``100 GAS per iterations``](#)
  
 
 ##
@@ -301,6 +303,30 @@ FILE: 2023-06-lybra/contracts/lybra/miner/esLBRBoost.sol
 + 33: function addLockSetting(esLBRLockSetting calldata setting) external onlyOwner {
 34:        esLBRLockSettings.push(setting);
 35:    }
+
+```
+##
+
+## [G-7] State variables should be cached outside the loop to save gas
+
+State variables should be cached outside the loop to save gas. This is because the gas cost of accessing a state variable inside a loop is higher than the gas cost of accessing a state variable outside a loop
+
+### ``peUSDExtraRatio`` should be cached outside the loop: Saves ``100 GAS per iterations`` 
+
+https://github.com/code-423n4/2023-06-lybra/blob/7b73ef2fbb542b569e182d9abf79be643ca883ee/contracts/lybra/miner/EUSDMiningIncentives.sol#L138
+
+
+```diff
+FILE: 2023-06-lybra/contracts/lybra/miner/EUSDMiningIncentives.sol
+
++ uint256 _peUSDExtraRatio= peUSDExtraRatio;
+138:for (uint i = 0; i < pools.length; i++) {
+139:            ILybra pool = ILybra(pools[i]);
+140:            uint borrowed = pool.getBorrowedOf(user);
+141:            if (pool.getVaultType() == 1) {
+- 142:                borrowed = borrowed * (1e20 + peUSDExtraRatio) / 1e20;
++ 142:                borrowed = borrowed * (1e20 + _peUSDExtraRatio) / 1e20;
+143:            }
 
 ```
 
