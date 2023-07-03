@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "XDZIBECX",
+  "risk": "3",
+  "title": "Funds could be stolen by function that calls an external contract",
+  "issueId": 799,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/799"
+}
