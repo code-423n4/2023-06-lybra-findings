@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "DedOhWale",
+  "risk": "2",
+  "title": "Potential Liquidation Mismatch Between Repaid and Transferred Amounts in LybraPeUSDVaultBase Contract",
+  "issueId": 859,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/859"
+}
