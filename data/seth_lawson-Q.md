@@ -59,3 +59,9 @@ the ProtocolRewardsPool.getReward() function in the ProtocolRewardsPool.sol cont
 The error occurs because EUSD's transferShares function returns a Boolean value, indicating whether the transfer was successful or not. In your code, you call this function, but ignore its result, which can lead to potential errors or undesirable behavior.
 
 To resolve this error, you need to take into account the return value of the transferShares function and handle cases where the transfer fails accordingly.
+
+8. stakerewardV2pool.sol
+
+You call the `transfer` function of `stakingToken` to transfer `_amount` to `msg.sender`. If the `stakingToken` contract is an external contract, this could allow that contract to call the `withdraw` function before it terminates, which can lead to undesirable behavior.
+
+Be sure to check that the `stakingToken` contract is secure and does not cause reentrance when executing the token transfer.
