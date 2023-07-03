@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Pechenite",
+  "risk": "2",
+  "title": "Possible loss of msg.value.",
+  "issueId": 896,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/896"
+}
