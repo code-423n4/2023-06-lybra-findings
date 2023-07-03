@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xkazim",
+  "risk": "3",
+  "title": "attacker can get `ESLBR` token with boost of 100% and `unstake` the token without waiting for 365 days",
+  "issueId": 739,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/739"
+}
