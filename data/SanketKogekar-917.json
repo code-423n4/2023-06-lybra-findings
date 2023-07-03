@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "SanketKogekar",
+  "risk": "3",
+  "title": "The `LybraRETHVault.depositEtherToMint` doesn't keep record of user's ether deposits which results in loss for the user.",
+  "issueId": 917,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/917"
+}
