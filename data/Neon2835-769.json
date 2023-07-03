@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Neon2835",
+  "risk": "3",
+  "title": "There is a vulnerability in the executeFlashloan function of the PeUSDMainnet contract. Hackers can use this vulnerability to burn other people's eUSD token balance without permission",
+  "issueId": 769,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/769"
+}
