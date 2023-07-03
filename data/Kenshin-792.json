@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Kenshin",
+  "risk": "3",
+  "title": "Incorrect fee calculation logic in `_repay()` function of peUSD vault base allowing borrowers can avoid repaying fee",
+  "issueId": 792,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/792"
+}
