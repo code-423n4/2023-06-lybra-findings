@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Breeje",
+  "risk": "2",
+  "title": "User can potentially lose all `PeUSD` token without any `eUSD` tokens in return while converting it back to `eUSD` in an Edge case",
+  "issueId": 908,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/908"
+}
