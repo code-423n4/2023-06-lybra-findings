@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0x6980",
+  "risk": "2",
+  "title": "The function will not work properly on Optimism due to use of `block.number`",
+  "issueId": 936,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/936"
+}
