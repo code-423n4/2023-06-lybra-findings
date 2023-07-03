@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "skodi",
+  "risk": "2",
+  "title": "User with bad collateralization ratio less than 125 cent can bypass super liquidation",
+  "issueId": 969,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/969"
+}
