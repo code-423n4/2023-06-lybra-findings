@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "RedOneN",
+  "risk": "3",
+  "title": "The ` superLiquidation() ` function unduly overcompensates liquidators at the expense of the users.",
+  "issueId": 776,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/776"
+}
