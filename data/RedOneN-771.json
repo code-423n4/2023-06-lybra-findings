@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "RedOneN",
+  "risk": "3",
+  "title": "`_repay()` function is not correctly handling the repayment of the notional.",
+  "issueId": 771,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/771"
+}
