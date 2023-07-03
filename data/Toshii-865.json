@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Toshii",
+  "risk": "2",
+  "title": "The functionality to pause burning for EUSD and PeUSD can result in bad debt across all vaults",
+  "issueId": 865,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/865"
+}
