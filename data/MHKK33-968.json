@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "MHKK33",
+  "risk": "3",
+  "title": "The _spendAllowance function in EUSD contract is labeled as virtual which can be overriden as malicious code",
+  "issueId": 968,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/968"
+}
