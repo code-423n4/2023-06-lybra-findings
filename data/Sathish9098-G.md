@@ -1,8 +1,44 @@
 # GAS OPTIMIZATION
 
+## TABLE OF CONTENTS
+
+### FINDINGS
+
+- [Optimizing gas consumption with tight variable packing- Saves ``20000 GAS , 10 SLOTS``](#g-1-optimizing-gas-consumption-with-tight-variable-packing)
+
+  - [ ``EUSDMiningIncentives.sol``: ``duration ,finishAt, updatedAt, rewardRatio, extraRatio ,peUSDExtraRatio `` Variables can be uint128 instead of uint256.``biddingFeeRatio`` can be uint94 instead of uint256 :     Saves ``8000 GAS , 4 SLOT`` ](#eusdminingincentivessol-duration-finishat-updatedat-rewardratio-extraratio-peusdextraratio--variables-can-be-uint128-instead-of-uint256biddingfeeratio-can-be-uint94-instead-of-uint256------saves-8000-gas--4-slot)
+  
+  - [ ``LybraConfigurator.sol``: ``redemptionFee ,flashloanFee ,maxStableRatio `` can be uint94 instead of uint256. Saves ``6000 GAS, 3 SLOT``](#lybraconfiguratorsol-redemptionfee-flashloanfee-maxstableratio--can-be-uint94-instead-of-uint256-saves-6000-gas-3-slot)
+
+  - [``ProtocolRewardsPool.sol``: ``grabFeeRatio`` can be uint94 instead of uint256 since the value not exceeds ``8000 `` as per this check ``require(_ratio <= 8000, "BCE");`` : Saves ``2000 GAS, 1 SLOD``](#protocolrewardspoolsol-grabfeeratio-can-be-uint94-instead-of-uint256-since-the-value-not-exceeds-8000--as-per-this-check-require_ratio--8000-bce--saves-2000-gas-1-slod)
+  
+  - [``stakerewardV2pool.sol``: ``duration ,finishAt, updatedAt, rewardRatio  `` Variables can be uint128 instead of uint256: Saves ``4000 Gas , 2 SLOT``](#stakerewardv2poolsol-duration-finishat-updatedat-rewardratio---variables-can-be-uint128-instead-of-uint256-saves-4000-gas--2-slot)
+ 
+- [Structs can be packed into fewer storage slots- Saves ``2000 GAS, 1 SLOT``](#g-2-structs-can-be-packed-into-fewer-storage-slots)
+
+  - [``esLBRBoost.sol``: ``unlockTime,duration`` can be uint128 instead of uint256 : Saves ``2000 GAS, 1 SLOT``](#eslbrboostsol-unlocktimeduration-can-be-uint128-instead-of-uint256--saves-2000-gas-1-slot)
+
+- [``maxSupply`` can be declared as constant to save large volume of gas - Saves ``42000 GAS``](#g-3-maxsupply-can-be-declared-as-constant-to-save-large-volume-of-gas)
+  
+  - [``esLBR.sol``,``LBR.sol``: ``maxSupply`` should be declared as constant instead of state variable : Saves ``42000 GAS``, ``200 GAS `` for each call ](#eslbrsollbrsol-maxsupply-should-be-declared-as-constant-instead-of-state-variable--saves-42000-gas-200-gas--for-each-call)
+
+- [Avoiding Unnecessary Storage of rkPool Address ](#g-4-avoiding-unnecessary-storage-of-rkpool-address)
+
+- [Using storage instead of memory for structs/arrays saves gas- Saves ``4100 GAS ``](#g-5-using-storage-instead-of-memory-for-structsarrays-saves-gas)
+
+  - [``esLBRBoost.sol``: ``storage`` should be used instead of ```memory: Saves ``4100 GAS  ``](#eslbrboostsol-storage-should-be-used-instead-of-memory-saves-4100-gas--)
+
+- [Using ``calldata`` instead of ``memory`` for read-only arguments in external functions saves gas- Saves ``614 GAS``](#g-6-using-calldata-instead-of-memory-for-read-only-arguments-in-external-functions-saves-gas)
+
+  - [``EUSDMiningIncentives.sol``: Use ``calldata`` instead of ``memory``: Saves ``312 GAS per iteration``](#eusdminingincentivessol-use-calldata-instead-of-memory-saves-312-gas-per-iteration)
+
+
+  -  [``esLBRBoost.sol``: Use ``calldata`` instead of ``memory``: Saves ``312 GAS ``](#eslbrboostsol-use-calldata-instead-of-memory-saves-312-gas-)
+ 
+
 ##
 
-## [G-] Optimizing gas consumption with tight variable packing
+## [G-1] Optimizing gas consumption with tight variable packing
 
 If variables occupying the same slot are both written the same function or by the constructor, avoids a separate Gsset (20000 gas). Reads of the variables can also be cheaper
 
@@ -128,7 +164,7 @@ FILE: 2023-06-lybra/contracts/lybra/miner/stakerewardV2pool.sol
 
 ##
 
-## [G-] Structs can be packed into fewer storage slots
+## [G-2] Structs can be packed into fewer storage slots
 
 Each slot saved can avoid an extra Gsset (20000 gas) for the first setting of the struct.
 Subsequent reads as well as writes have smaller gas savings.
@@ -156,7 +192,7 @@ FILE: 2023-06-lybra/contracts/lybra/miner/esLBRBoost.sol
 
 ##
 
-## [G-] ``maxSupply`` can be declared as constant to save large volume of gas 
+## [G-3] ``maxSupply`` can be declared as constant to save large volume of gas 
 
 The ``maxSupply`` value not changed any where inside the contract. This value only used for checking ``totalSupply() + amount <= maxSupply``
 
@@ -193,7 +229,7 @@ FILE: 2023-06-lybra/contracts/lybra/token/LBR.sol
 
 ##
 
-## [G-] Avoiding Unnecessary Storage of rkPool Address 
+## [G-4] Avoiding Unnecessary Storage of rkPool Address 
 
 The constructor of the LybraRETHVault contract takes the address of the rkPool contract as a parameter. This means that the value of rkPool is already known to the contract when it is deployed. There is no need to store the value of rkPool in the state of the contract, as it can be retrieved from the parameter of the constructor
 
@@ -210,7 +246,7 @@ FILE: 2023-06-lybra/contracts/lybra/pools/LybraRETHVault.sol
 
 ##
 
-## [G-] Using storage instead of memory for structs/arrays saves gas
+## [G-5] Using storage instead of memory for structs/arrays saves gas
 
 When fetching data from a storage location, assigning the data to a memory variable causes all fields of the struct/array to be read from storage, which incurs a Gcoldsload (2100 gas) for each field of the struct/array. If the fields are read from the new memory variable, they incur an additional MLOAD rather than a cheap stack read. Instead of declearing the variable with the memory keyword, declaring the variable with the storage keyword and caching any fields that need to be re-read in stack variables, will be much cheaper, only incuring the Gcoldsload for the fields actually read. The only time it makes sense to read the whole struct/array into a memory variable, is if the full struct/array is being returned by the function, is being passed to a function that requires memory, or if the array/struct is being read from another memory array/struct
 
@@ -230,7 +266,7 @@ FILE: 2023-06-lybra/contracts/lybra/miner/esLBRBoost.sol
 
 ##
 
-## [G-] Using ``calldata`` instead of ``memory`` for read-only arguments in external functions saves gas
+## [G-6] Using ``calldata`` instead of ``memory`` for read-only arguments in external functions saves gas
 
 When a function with a memory array is called externally, the abi.decode ()  step has to use a for-loop to copy each index of the calldata to the memory index. Each iteration of this for-loop costs at least 60 gas (i.e. 60 * <mem_array>.length). Using calldata directly, obliviates the need for such a loop in the contract code and runtime execution
 
@@ -281,7 +317,7 @@ FILE: 2023-06-lybra/contracts/lybra/miner/esLBRBoost.sol
 
 
 
-##
+
 
 
 
