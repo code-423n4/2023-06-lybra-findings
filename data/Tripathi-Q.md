@@ -2,9 +2,10 @@
 
 | |Issue|Instances|
 |-|:-|:-:|
-| [L&#x2011;01] | `_mintEUSD ` emits incorrect parameter | 1 | 
+| [L&#x2011;01] | `_mintEUSD ` emits incorrect parameter in `Mint` event | 1 | 
 
-### [L&#x2011;01] `_mintEUSD ` emits incorrect parameter
+
+### [L&#x2011;01] `_mintEUSD ` emits incorrect parameter in `Mint` event
 `_mintEUSD ` is a internal function in pool/base contracts which emit an event after sucessfull minting of eUSD. 
 Currently first parameter is `msg.sender` which should be replaced by `_provider`. The fact that, everywhere `msg.sender` is same as `_provider` in current implementation is not creating any problem .But this will emit incorrect event if `msg.sender` and `_provider` are different in any case.
 
