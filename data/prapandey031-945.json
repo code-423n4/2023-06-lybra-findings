@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "prapandey031",
+  "risk": "2",
+  "title": "The ethlbrStakePool, which is used in LOC 155 in EUSDMiningIncentives.sol, has no function balanceOf()",
+  "issueId": 945,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/945"
+}
