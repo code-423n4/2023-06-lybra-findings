@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Toshii",
+  "risk": "2",
+  "title": "Improper integration with the Rocket Pool protocol can result in bricking LybraRETHVault functionality",
+  "issueId": 853,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/853"
+}
