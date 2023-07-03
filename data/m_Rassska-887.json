@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "m_Rassska",
+  "risk": "3",
+  "title": "`WstETHVault` falsely wraps `msg.value` instead of `stETH` received from the Lido",
+  "issueId": 887,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/887"
+}
