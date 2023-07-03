@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "No12Samurai",
+  "risk": "3",
+  "title": "`ProtocolRewardsPool` Calculates the Wrong Reward Concerning Decimals",
+  "issueId": 603,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/603"
+}
