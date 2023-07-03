@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Kaysoft",
+  "risk": "3",
+  "title": "The EUSD.sol contract is vulnerable to inflation attack and user funds stolen",
+  "issueId": 725,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/725"
+}
