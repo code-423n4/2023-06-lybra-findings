@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Go-Langer",
+  "risk": "2",
+  "title": "[M] convertToPeUSD function does not check if user has approved the contract to spend their tokens",
+  "issueId": 914,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/914"
+}
