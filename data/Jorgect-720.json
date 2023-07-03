@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Jorgect",
+  "risk": "2",
+  "title": "Error in calculation in getReward function in protocolRewarsPool.sol",
+  "issueId": 720,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/720"
+}
