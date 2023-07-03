@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xRobocop",
+  "risk": "2",
+  "title": "getReward in the ProtocolRewardsPool is unfairly",
+  "issueId": 846,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/846"
+}
