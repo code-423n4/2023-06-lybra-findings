@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Ankitvnsbihar",
+  "risk": "3",
+  "title": "The \"withdraw\" function in the code does not have a require statement to check the upper limit that can be withdrawn by the user. This means that a user could potentially withdraw more tokens than they have staked, which would be a security vulnerability",
+  "issueId": 833,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/833"
+}
