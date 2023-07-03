@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "j4ld1na",
+  "risk": "2",
+  "title": "Possible race condition when using the `approve()` functionality.",
+  "issueId": 715,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/715"
+}
