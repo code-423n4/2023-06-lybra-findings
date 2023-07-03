@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Inspecktor",
+  "risk": "3",
+  "title": "Stake LBR does not take into account esLBRBoost.LockStatus, which leads to incorrect calculation of unlockTime",
+  "issueId": 756,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/756"
+}
