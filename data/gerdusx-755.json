@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "gerdusx",
+  "risk": "2",
+  "title": "`stakerewardV2pool::stake` is vulnerable to fee-on-transfer accounting-related issues",
+  "issueId": 755,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/755"
+}
