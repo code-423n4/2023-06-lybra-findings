@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "jaraxxus",
+  "risk": "2",
+  "title": "Protocol is compatible with version 0.8.20 which is a problem for Arbitrum ",
+  "issueId": 816,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/816"
+}
