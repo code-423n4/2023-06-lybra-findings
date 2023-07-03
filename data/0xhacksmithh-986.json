@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "0xhacksmithh",
+  "risk": "2",
+  "title": "While Minting or Burning In Vaults Its Never Checked Is `mint functionality` or `repayment functionality` Enabled Or Disabled For Those Vaults",
+  "issueId": 986,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/986"
+}
