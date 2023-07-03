@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "Pechenite",
+  "risk": "2",
+  "title": "Chainlink Oracle will return the wrong price for asset if underlying aggregator hits minAnswer. ",
+  "issueId": 648,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/648"
+}
