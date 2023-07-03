@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "squeaky_cactus",
+  "risk": "2",
+  "title": "esLBR mint and burn require a non-zero Protocol Rewards Pool",
+  "issueId": 629,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/629"
+}
