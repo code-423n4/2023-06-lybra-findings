@@ -6,10 +6,10 @@
 | :----: | :---------------------------------------------------------------------------------- | :-----: |
 | [G-01] | Avoid contract `existence` checks by using low level calls                          |    1    |
 | [G-02] | Using fixed bytes is cheaper than using `string`                                    |    2    |
-| [G-03] |                                                                                     |    7    |
+| [G-03] | Expressions for `constant` values such as a call to keccak256(), should use immutable rather than constant                                                                                    |    7    |
 | [G-04] | Using `calldata` instead of `memory` for read-only arguments                        |    7    |
 | [G-05] | Before some functions, we should `check` some variables for possible gas save       |    8    |
-| [G-06] |                                                                                     |    1    |
+| [G-06] | `LybraPeUSDVaultBase::LybraPeUSDVaultBase()` function not called by the contract should be removed to save deployment gas                                                                                    |    1    |
 | [G-07] | Duplicated `require()` checks should be refactored to a modifier or function        |   18    |
 | [G-08] | Use constants instead of `type(uintx).max`                                          |    1    |
 | [G-09] | Use double `require` instead of using &&                                            |    3    |
