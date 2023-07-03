@@ -1,0 +1,8 @@
+{
+  "contest": 254,
+  "handle": "j4ld1na",
+  "risk": "2",
+  "title": "The Contract Should `approve(0)` first - A second call to the function may revert.",
+  "issueId": 709,
+  "issueUrl": "https://github.com/code-423n4/2023-06-lybra-findings/issues/709"
+}
